@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.client.StatAccessMyBatisDao">
+
+    <update id="touchStatAccess" parameterType="net.workspace.web.entity.client.StatAccessEntity">
+        insert into t_stat_access (access_date,client_id) values (#{accessDate},#{clientId})
+        ON DUPLICATE KEY
+        update client_id=client_id
+    </update>
+</mapper> 

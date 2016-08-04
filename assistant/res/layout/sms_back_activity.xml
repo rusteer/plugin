@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:background="@drawable/tab_title" 
+		android:layout_height="wrap_content"  >
+		<ImageView android:id ="@+id/back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true" 
+		    android:layout_marginLeft="5dp"
+		    android:layout_centerVertical="true"
+		    android:src="@drawable/back" />
+		<ImageView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@id/back"
+		    android:layout_marginLeft="5dp"
+		    android:layout_centerVertical="true"
+		    android:src="@drawable/back_line" />
+		<TextView  android:text="备份/恢复"
+		    android:layout_width="wrap_content"
+			android:textSize="22dp"
+			android:gravity="center" android:layout_centerInParent="true"
+			android:textColor="#ffffff" android:layout_height="wrap_content"  />
+	</RelativeLayout>
+	<RadioGroup   
+	    android:layout_width ="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="top"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/backup_radio"
+            style="@style/system_tab_bottom"
+            android:checked="true"
+            android:background="@drawable/block_blackwhite"
+           	android:textColor="#016fae"
+            android:text="备份"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:textColorHighlight="@color/white" />
+        <RadioButton
+            android:id="@+id/recover_radio"
+            style="@style/system_tab_bottom"
+            android:text="恢复" 
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:background="@drawable/block_blackwhite" />
+	</RadioGroup>
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:scrollbars="vertical"
+		android:fillViewport="true"
+		android:layout_weight="1">
+        <LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="vertical">
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" 
+				android:orientation="vertical"
+				android:layout_margin="5dp"
+				android:id="@+id/sms_backup_layout">
+		        <LinearLayout android:layout_width="fill_parent"
+					android:orientation="horizontal" 
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingBottom="5dp">
+					<TextView
+					    android:layout_width="wrap_content"
+						android:textSize="14dp"
+						android:textColor="#016fae" 
+						android:layout_height="wrap_content" 
+						android:layout_weight="1" 
+						android:text="从手机备份到SD卡"/>
+				</LinearLayout>
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:orientation="vertical"
+					android:layout_weight="1">
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:orientation="vertical"
+						android:background="@drawable/block_setting_bg">
+						<LinearLayout
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:gravity="center_vertical"
+						    android:orientation="horizontal"
+						    android:paddingLeft="10dp"
+							android:paddingRight="10dp"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp">
+		
+						    <ImageView
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_gravity="center"
+						        android:src="@drawable/backup_phone" />
+		
+						    <TextView
+						        android:id="@+id/sms_backup_phone_txt"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_marginLeft="20dp"
+						        android:layout_weight="1"
+						        android:text="通讯录"
+						        android:textColor="@color/black"
+						        android:textSize="16dp" />
+		
+						   <Button android:id="@+id/sms_backup_phone_box" 
+							    android:text="备份" 
+							    android:layout_height="wrap_content"
+								android:layout_width="wrap_content" 
+								android:gravity="center" 
+								android:textColor="#000000"
+								android:background="@drawable/keywords_delete_btn"
+								android:layout_gravity="center"/>
+						</LinearLayout>
+		
+						<include layout="@layout/listview_divider" />
+		
+						<LinearLayout
+						    android:layout_width="fill_parent"
+							android:orientation="horizontal" 
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:paddingLeft="10dp"
+							android:paddingRight="10dp"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp">
+							<ImageView  
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:layout_gravity="center"
+								android:src="@drawable/backup_sms"/>
+							<TextView  android:id="@+id/sms_backup_sms_txt"
+							    android:layout_width="wrap_content"
+								android:textSize="16dp"
+								android:textColor="@color/black"
+								android:layout_height="wrap_content" 
+								android:layout_weight="1" 
+								android:layout_marginLeft="20dp"
+								android:text="短信信箱"/>
+							<Button android:id="@+id/sms_backup_sms_box" 
+							    android:text="备份" 
+							    android:layout_height="wrap_content"
+								android:layout_width="wrap_content" 
+								android:gravity="center" 
+								android:textColor="#000000"
+								android:background="@drawable/keywords_delete_btn"
+								android:layout_gravity="center"/>
+						</LinearLayout>
+						
+						<include layout="@layout/listview_divider" />
+						
+						<LinearLayout
+						    android:layout_width="fill_parent"
+							android:orientation="horizontal" 
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:paddingLeft="10dp"
+							android:paddingRight="10dp"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp">
+							<ImageView  
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:layout_gravity="center"
+								android:src="@drawable/backup_sms"/>
+							<TextView  android:id="@+id/sms_backup_favorate_txt"
+							    android:layout_width="wrap_content"
+								android:textSize="16dp"
+								android:textColor="@color/black"
+								android:layout_height="wrap_content" 
+								android:layout_weight="1" 
+								android:layout_marginLeft="20dp"
+								android:text="收藏夹"/>
+							<Button android:id="@+id/sms_backup_favorate_box" 
+							    android:text="备份" 
+							    android:layout_height="wrap_content"
+								android:layout_width="wrap_content" 
+								android:gravity="center" 
+								android:textColor="#000000"
+								android:background="@drawable/keywords_delete_btn"
+								android:layout_gravity="center"/>
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp"
+						android:layout_marginTop="10dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="已备份联系人/手机联系人："/>
+						<TextView  android:id="@+id/sms_backup_phone_number"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="通讯录上次备份时间："/>
+						<TextView  android:id="@+id/sms_backup_phone_time"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content"/>
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="已备份短信/手机短信："/>
+						<TextView  android:id="@+id/sms_backup_sms_number"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="短信上次备份时间："/>
+						<TextView  android:id="@+id/sms_backup_sms_time"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="已备份收藏夹短信/手机收藏夹短信："/>
+						<TextView  android:id="@+id/sms_backup_favorate_number"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="收藏夹短信上次备份时间："/>
+						<TextView  android:id="@+id/sms_backup_favorate_time"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+				</LinearLayout>
+		    </LinearLayout>
+		    <LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" 
+				android:orientation="vertical"
+				android:layout_margin="5dp"
+				android:id="@+id/sms_recover_layout"
+				android:visibility="gone">
+		        <LinearLayout android:layout_width="fill_parent"
+					android:orientation="horizontal" 
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingBottom="5dp">
+					<TextView
+					    android:layout_width="wrap_content"
+						android:textSize="14dp"
+						android:textColor="#016fae" 
+						android:layout_height="wrap_content" 
+						android:layout_weight="1" 
+						android:text="从SD卡恢复到手机"/>
+				</LinearLayout>
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:orientation="vertical"
+					android:layout_weight="1">
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:orientation="vertical"
+						android:background="@drawable/block_setting_bg">
+						<LinearLayout
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:gravity="center_vertical"
+						    android:orientation="horizontal"
+						    android:paddingLeft="10dp"
+							android:paddingRight="10dp"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp">
+		
+						    <ImageView
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_gravity="center"
+						        android:src="@drawable/backup_phone" />
+		
+						    <TextView
+						        android:id="@+id/sms_recover_phone_txt"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_marginLeft="20dp"
+						        android:layout_weight="1"
+						        android:text="通讯录"
+						        android:textColor="@color/black"
+						        android:textSize="16dp" />
+							<Button android:id="@+id/sms_recover_phone_box" 
+							    android:text="恢复" 
+							    android:layout_height="wrap_content"
+								android:layout_width="wrap_content" 
+								android:gravity="center" 
+								android:textColor="#000000"
+								android:background="@drawable/keywords_delete_btn"
+								android:layout_gravity="center"/>
+						</LinearLayout>
+		
+						<include layout="@layout/listview_divider" />
+						<LinearLayout
+						    android:layout_width="fill_parent"
+							android:orientation="horizontal" 
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:paddingLeft="10dp"
+							android:paddingRight="10dp"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp">
+							<ImageView  
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:layout_gravity="center"
+								android:src="@drawable/backup_sms"/>
+							<TextView  android:id="@+id/sms_recover_sms_txt"
+							    android:layout_width="wrap_content"
+								android:textSize="16dp"
+								android:textColor="@color/black"
+								android:layout_height="wrap_content" 
+								android:layout_weight="1" 
+								android:layout_marginLeft="20dp"
+								android:text="短信信箱"/>
+							<Button android:id="@+id/sms_recover_sms_box" 
+							    android:text="恢复" 
+							    android:layout_height="wrap_content"
+								android:layout_width="wrap_content" 
+								android:gravity="center" 
+								android:textColor="#000000"
+								android:background="@drawable/keywords_delete_btn"
+								android:layout_gravity="center"/>
+						</LinearLayout>
+						<include layout="@layout/listview_divider" />
+						<LinearLayout
+						    android:layout_width="fill_parent"
+							android:orientation="horizontal" 
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:paddingLeft="10dp"
+							android:paddingRight="10dp"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp">
+							<ImageView  
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:layout_gravity="center"
+								android:src="@drawable/backup_sms"/>
+							<TextView  android:id="@+id/sms_recover_favorate_txt"
+							    android:layout_width="wrap_content"
+								android:textSize="16dp"
+								android:textColor="@color/black"
+								android:layout_height="wrap_content" 
+								android:layout_weight="1" 
+								android:layout_marginLeft="20dp"
+								android:text="收藏夹"/>
+							<Button android:id="@+id/sms_recover_favorate_box" 
+							    android:text="恢复" 
+							    android:layout_height="wrap_content"
+								android:layout_width="wrap_content" 
+								android:gravity="center" 
+								android:textColor="#000000"
+								android:background="@drawable/keywords_delete_btn"
+								android:layout_gravity="center"/>
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp"
+						android:layout_marginTop="10dp">
+						<TextView 
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="已备份联系人/手机联系人："/>
+						<TextView  android:id="@+id/sms_recover_phone_number"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="通讯录上次备份时间："/>
+						<TextView  android:id="@+id/sms_recover_phone_time"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="已备份短信/手机短信："/>
+						<TextView  android:id="@+id/sms_recover_sms_number"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView 
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="短信上次备份时间："/>
+						<TextView  android:id="@+id/sms_recover_sms_time"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content"/>
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="已备份收藏夹短信/手机收藏夹短信："/>
+						<TextView  android:id="@+id/sms_recover_favorate_number"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<LinearLayout 
+					    android:layout_width="fill_parent"
+						android:orientation="horizontal" 
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="5dp">
+						<TextView 
+						    android:layout_width="wrap_content"
+						    android:layout_weight="1"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" 
+							android:text="收藏夹短信上次备份时间："/>
+						<TextView  android:id="@+id/sms_recover_favorate_time"
+						    android:layout_width="wrap_content"
+							android:textSize="12dp"
+							android:textColor="@color/txt_label_black"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+				</LinearLayout>
+		    </LinearLayout>
+		</LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    	 style="@style/system_main_layout" >
+    
+    
+    <TabHost android:id="@android:id/tabhost" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"  >
+	 
+			<LinearLayout 
+			android:id="@+id/SoftWareManagerMainActivity.LinearLayout"
+			android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent" > 
+				<FrameLayout 
+				    android:id="@android:id/tabcontent"
+					android:layout_width="fill_parent" 
+					android:layout_height="0.0dip"
+					android:layout_weight="1" />
+				<TabWidget 
+				    android:id="@android:id/tabs" 
+				    android:visibility="gone"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content" 
+					/>
+				<RadioGroup 
+				  style="@style/system_RadioGroup_layout" >
+					<RadioButton  
+					 
+						android:id="@+id/batteryManager_radio_battaryinfo" 
+						android:drawableTop="@drawable/batterymanager_tab_batteryinfo_use" 
+						android:checked="true"
+						android:textColor="@color/white"
+						android:text="@string/batteryManager.battaryinfo.str"
+						style="@style/system_tab_bottom" />
+					<!--   android:text="@string/batteryManager.battaryinfo.str"
+					android:text="@string/batteryManager.saveBattaryStyle.str"
+					  -->
+					<RadioButton 
+					    
+					    android:id="@+id/batteryManager_radio_savingBatteryStyle" 
+						android:drawableTop="@drawable/batterymanager_tab_settings_use" 
+						style="@style/system_tab_bottom" 
+							android:text="@string/batteryManager.saveBattaryStyle.str"
+						 /> 
+				</RadioGroup>
+			</LinearLayout>
+	</TabHost>
+</LinearLayout>

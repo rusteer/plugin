@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">真人美女</string>
+    <string name="new_game">新游戏</string>
+    <string name="game_over">游戏结束</string>
+    <string name="instructions">通过画水平或者竖直线来分割小球活动空间,当小球被限制到足够小的范围时,就可以过关了..</string>
+    <string name="quit">退出</string>
+    <string name="percent_contained">%d%%</string>
+    <string name="level">级别 %d</string>
+    <string name="one_life_left">还剩下1条命</string>
+    <string name="lives_left">还剩下%d条命</string>
+    <string name="unpause_instructions">点击这儿继续游戏</string>
+    <string name="settings_vibrate">开启振动</string>
+    <string name="settings_vibrate_summary">开启振动效果</string>
+    <string name="settings_difficulty">难度</string>
+    <string name="settings_difficulty_summary">选择开始有多少条命</string>
+    <string name="settings_five_lives">5条命</string>
+    <string name="settings_three_lives">3条命</string>
+    <string name="settings_one_life">1条命</string>
+    <string name="one_live_left">还剩下1条命!</string>
+    <string name="bonus_life">bonus life!</string>
+    <string name="rock_10">Level 10? You ROCK!</string>
+    <string name="ball_15">BALLS TO THE WALL!</string>
+    <string name="click_to_next">click to picture to next level!</string>
+    <string name="con_game">Continue This Level</string>
+    <string name="warn_dlg">提示</string>
+    <string name="warn_msg">There must be more pretty girls behind, but you had not enough points to apply this function, are you want to earn more points?It free!</string>
+    <string name="yes">Yes, I want</string>
+    <string name="no">No, thanks</string>
+    <string name="newgame">新游戏</string>
+    <string name="Settings">设置</string>
+    <string name="noti_title">@string/app_name</string>
+    <string name="noti_msg">Sexy Balls2,More hot girls, More joy, U like it!</string>
+    <string name="pingfen_msg">Please get our app your rating and support us, it will more good apps behind, would U warn?</string>
+    <string name="more_title">More game</string>
+
+</resources>

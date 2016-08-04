@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--节电设置 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     style="@style/system_main_layout" >
+	<LinearLayout 
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"  >
+	    <RelativeLayout android:layout_width="fill_parent"
+			android:background="@drawable/tab_title" 
+			android:layout_height="wrap_content"  >
+			<ImageView android:id ="@+id/back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true" 
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back" />
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/back"
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back_line" />
+			<TextView  android:text="@string/batteryManager.SaveBattaryStyleSetting.str" 
+			    android:layout_width="wrap_content"
+				android:textSize="22dp"
+				android:gravity="center" android:layout_centerInParent="true"
+				android:textColor="#ffffff" android:layout_height="wrap_content"  />
+		</RelativeLayout>
+	     <ScrollView
+	     	android:layout_width="fill_parent"
+		 	android:layout_height="wrap_content">
+	        <LinearLayout 
+			    android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content">
+			     <LinearLayout android:gravity="center_vertical"
+					android:id="@+id/batteryManager_setting_Wifi"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal">
+                     <LinearLayout 
+                         android:orientation="vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+						<TextView android:textSize="16dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.CloseWifi.str" />
+						<TextView  android:id="@+id/batteryManager_SaveBattaryStyleCloseWifi_text"
+						    android:textSize="12dp"
+						    android:paddingTop="3dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/txt_label_black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.SaveBattaryStyleCloseWifi.str" />
+                     </LinearLayout>
+					<ImageView 
+					    android:id="@+id/batteryManager_SaveBattaryStyleCloseWifi_btn"
+					    android:duplicateParentState="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/batterymanager_switch_on_normal" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+               	</LinearLayout>
+				<include layout="@layout/listview_divider" />
+	            
+	    		 <LinearLayout android:gravity="center_vertical"
+					android:id="@+id/batteryManager_setting_2Gand3G"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal">
+                     <LinearLayout 
+                         android:orientation="vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+						<TextView android:textSize="16dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.Close2Gand3G.str" />
+						<TextView  android:id="@+id/batteryManager_SaveBattaryStyleClose2Gand3G_text"
+						    android:textSize="12dp"
+						    android:paddingTop="3dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/txt_label_black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.SaveBattaryStyleClose2Gand3G.str" />
+                     </LinearLayout>
+					<ImageView 
+					    android:id="@+id/batteryManager_SaveBattaryStyleClose2Gand3G_btn"
+					    android:duplicateParentState="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/batterymanager_switch_on_normal" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+               	</LinearLayout>
+				<include layout="@layout/listview_divider" />
+	     		
+				<LinearLayout android:gravity="center_vertical"
+					android:id="@+id/batteryManager_setting_Bluetooth"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal">
+                     <LinearLayout 
+                         android:orientation="vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+						<TextView android:textSize="16dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.colseBluetooth.str" />
+						<TextView  android:id="@+id/batteryManager_SaveBattaryStyleCloseBluetooth_text"
+						    android:textSize="12dp"
+						    android:paddingTop="3dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/txt_label_black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.SaveBattaryStyleCloseBlueTooth.str" />
+                     </LinearLayout>
+					<ImageView 
+					    android:id="@+id/batteryManager_SaveBattaryStyleCloseBluetooth_btn"
+					    android:duplicateParentState="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/batterymanager_switch_on_normal" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+               	</LinearLayout>
+				<include layout="@layout/listview_divider" />
+	  
+	     <!-- GPS -->
+	     		<LinearLayout android:gravity="center_vertical"
+					android:id="@+id/batteryManager_setting_GPS"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal">
+                     <LinearLayout 
+                         android:orientation="vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+						<TextView android:textSize="16dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.GPS.str" />
+						<TextView  android:id="@+id/batteryManager_SaveBattaryStyleCloseGPS_text"
+						    android:textSize="12dp"
+						    android:paddingTop="3dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/txt_label_black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.SaveBattaryStyleCloseGPS.str" />
+                     </LinearLayout>
+					<ImageView 
+					    android:id="@+id/batteryManager_SaveBattaryStyleCloseGPS_btn"
+					    android:duplicateParentState="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/batterymanager_switch_on_normal" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+               	</LinearLayout>
+				<include layout="@layout/listview_divider"/>
+			   
+		     <!--屏幕亮度  -->
+		     	<LinearLayout android:gravity="center_vertical"
+					android:id="@+id/batteryManager_setting_Screen"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:visibility="gone">
+                     <LinearLayout 
+                         android:orientation="vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+						<TextView android:textSize="16dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.Screen.str" />
+						<TextView  android:id="@+id/batteryManager_SaveBattaryStyleScreen_text"
+						    android:textSize="12dp"
+						    android:paddingTop="3dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/txt_label_black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.SaveBattaryStyleScreen.str" />
+                     </LinearLayout>
+					<ImageView 
+					    android:duplicateParentState="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/arrow_right" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+               	</LinearLayout>
+	              
+				<!--屏幕自动旋转  -->
+				 <LinearLayout android:gravity="center_vertical"
+					android:id="@+id/batteryManager_setting_ScreenAutoRota"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal">
+                     <LinearLayout 
+                         android:orientation="vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+						<TextView android:textSize="16dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.ScreenAutoRota.str" />
+						<TextView  android:id="@+id/batteryManager_SaveBattaryStyleScreenAutoRota_text"
+						    android:textSize="12dp"
+						    android:paddingTop="3dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/txt_label_black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.SaveBattaryStyleScreenAutoRota.str" />
+                     </LinearLayout>
+					<ImageView 
+					    android:id="@+id/batteryManager_SaveBattaryStyleScreenAutoRota_btn"
+					    android:duplicateParentState="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/batterymanager_switch_on_normal" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+               	</LinearLayout>
+				<include layout="@layout/listview_divider"/>   
+				
+				<!--来电振动  -->
+				 <LinearLayout android:gravity="center_vertical"
+					android:id="@+id/batteryManager_setting_Vibration"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal">
+                     <LinearLayout 
+                         android:orientation="vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+						<TextView android:textSize="16dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.CloseVibration.str" />
+						<TextView  android:id="@+id/batteryManager_SaveBattaryStyleVibration_text"
+						    android:textSize="12dp"
+						    android:paddingTop="3dp"
+							android:layout_centerVertical="true"
+							android:textColor="@color/txt_label_black"
+							android:duplicateParentState="true" android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="@string/batteryManager.SaveBattaryStyleCloseVibration.str" />
+                     </LinearLayout>
+					<ImageView 
+					    android:id="@+id/batteryManager_SaveBattaryStyleVibration_btn"
+					    android:duplicateParentState="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/batterymanager_switch_on_normal" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+               	</LinearLayout>
+				<include layout="@layout/listview_divider"/>   
+			 </LinearLayout>	        
+	     </ScrollView>
+     </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:layout_width="fill_parent" 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:orientation="horizontal"  
+	android:padding="3dp"
+	android:gravity="center">
+	<ImageView android:layout_marginLeft="5dp"
+	    android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:src="@drawable/feescan_sms_image" />
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_marginLeft="5dp">
+		<LinearLayout android:orientation="horizontal" android:padding="3dp"
+			android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<TextView android:text="电话号码" android:layout_height="wrap_content"
+			 	android:layout_width="wrap_content" android:layout_weight="1"
+			 	android:textSize="16dp" android:textColor="#f7941d"
+				 android:id="@+id/feescan_listview_item_number" />
+			<TextView android:text="通话时间" 
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:textColor="#f7941d" android:id="@+id/feescan_listview_item_date" 
+				android:textSize="12dp"/>
+		</LinearLayout>
+		<TextView android:text="内容" android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:textSize="12dp"
+			android:textColor="#f7941d" android:id="@+id/feescan_listview_item_body" />
+	</LinearLayout>
+</LinearLayout>

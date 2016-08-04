@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="10.799988dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/appIcon" android:layout_width="49.0dip" android:layout_height="49.0dip" android:src="@drawable/common_more_default" android:scaleType="fitXY" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:src="@drawable/common_more_arrow" android:layout_alignBottom="@id/appIcon" android:layout_alignParentRight="true" />
+    <RelativeLayout android:id="@id/appPriceRegion" android:background="@drawable/common_more_free" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <TextView android:textSize="9.0dip" android:textStyle="bold" android:textColor="#ffededed" android:id="@id/appPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Free" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_toLeftOf="@id/appPriceRegion" android:layout_toRightOf="@id/appIcon" android:layout_alignBottom="@id/appIcon">
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="#ff203752" android:ellipsize="end" android:id="@id/appName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:text="Find 5 Differences" android:singleLine="true" />
+        <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="#ff8f9092" android:ellipsize="end" android:id="@id/appDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Droid7" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

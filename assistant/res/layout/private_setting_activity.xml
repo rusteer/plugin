@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_title" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/back"
+            android:src="@drawable/back_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/block_setting_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_pwd_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_pwd_title_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:duplicateParentState="true"
+                        android:text="@string/private_setting_pwdTitle"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_pwd_title_txt"
+                        android:duplicateParentState="true"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_title_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_title_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:duplicateParentState="true"
+                        android:text="@string/private_setting_title"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_title_txt"
+                        android:duplicateParentState="true"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/block_setting_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block_setting_mode_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="@string/private_setting_bar_title"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_newNotify_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_newNotify_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/private_setting_newNotify"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <CheckBox
+                        android:id="@+id/private_setting_newNotify_cbox"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_newNotify_txt"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:paddingRight="10dp" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_smsRing_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_smsRing_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:duplicateParentState="true"
+                        android:text="@string/private_setting_smsRing"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_smsRing_txt"
+                        android:duplicateParentState="true"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_smsNotificon_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_smsNotificon_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:duplicateParentState="true"
+                        android:text="@string/private_setting_smsNotificon"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_smsNotificon_txt"
+                        android:duplicateParentState="true"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_callNotificon_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_callNotificon_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:duplicateParentState="true"
+                        android:text="@string/private_setting_callNotificon"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_callNotificon_txt"
+                        android:duplicateParentState="true"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_Notifwords_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_Notifwords_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="@string/private_setting_Notifwords"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <TextView
+                        android:id="@+id/private_setting_Notifwords_value_txt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/private_setting_Notifwords_txt"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/txt_status_gray" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:duplicateParentState="true"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_newNotifvibrate_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_newNotifvibrate_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/private_setting_newNotifvibrate"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <CheckBox
+                        android:id="@+id/private_setting_newNotifvibrate_cbox"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_newNotifvibrate_txt"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:paddingRight="10dp" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_callautoReturn_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_callautoReturn_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/private_setting_callautoReturn"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <CheckBox
+                        android:id="@+id/private_setting_callautoReturn_cbox"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/private_setting_callautoReturn_txt"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:paddingRight="10dp" />
+                </RelativeLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/private_setting_SMS_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/private_setting_SMS_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="@string/private_setting_SMS"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/txt_label_black" />
+
+                    <TextView
+                        android:id="@+id/private_setting_SMS_value_txt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/private_setting_SMS_txt"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/txt_status_gray" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:duplicateParentState="true"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

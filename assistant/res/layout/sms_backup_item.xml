@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content">
+	<ImageView
+		android:id="@+id/sms_listview_item_readflag_img"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+		android:layout_weight="1">
+		<TextView android:id="@+id/sms_listview_item_phone_txt"
+			android:duplicateParentState="true" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/txt_label_black"
+			 />
+		<TextView android:id="@+id/sms_listview_item_msg_txt"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" 
+			android:textColor="@color/txt_label_black"
+			/>
+	</LinearLayout>
+	<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:orientation="horizontal" >
+        <RadioButton 
+            android:drawableRight="@drawable/software_chk_correct_bg"
+       		android:button="@null"
+       		android:id="@+id/sms_listview_item_choice_cbox"
+       		android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:gravity="center"
+	    	android:layout_gravity="center|right"
+	    	android:focusable="false" 
+	    	android:clickable="false"/>
+    </LinearLayout>
+</LinearLayout>

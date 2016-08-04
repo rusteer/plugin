@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_focused="true"
+ 		android:drawable="@drawable/phone_list_view_click_bg"/>
+	<item android:state_pressed="true"
+	    android:drawable="@drawable/phone_list_view_click_bg"/>
+</selector>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 缓存清除 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    style="@style/system_main_layout">
+
+    <LinearLayout
+        android:id="@+id/task_mainlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+		<RelativeLayout android:layout_width="fill_parent"
+			android:background="@drawable/tab_title" 
+			android:layout_height="wrap_content"  >
+			<ImageView android:id ="@+id/back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true" 
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back" />
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/back"
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back_line" />
+			<TextView  android:text="@string/SystemOptimizationActivity.ClearCache.Str"
+			    android:layout_width="wrap_content"
+				android:textSize="22dp"
+				android:gravity="center" android:layout_centerInParent="true"
+				android:textColor="#ffffff" android:layout_height="wrap_content"  />
+		</RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout style="@style/system_title_layout" >
+
+                <TextView
+                    style="@style/system_title_text"
+                    android:text="@string/WhiteList.msg1.Str" />
+
+                <TextView
+                    android:id="@+id/system_clear_cache_numberMsg"
+                    style="@style/system_title_text"
+                    android:text="0"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/system_title_text"
+                    android:text="@string/ClearCache.cacheMsg.Str" />
+
+                <TextView
+                    android:id="@+id/system_clear_cache_sizeMsg"
+                    style="@style/system_title_text"
+                    android:text="0.0K"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+        </FrameLayout>
+		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/system_task_header_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" >
+            <TextView
+                android:id="@+id/system_task_soft_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:state_pressed="true"
+                android:layout_weight="1"
+                android:textColor="@color/txt_label_blue"
+                android:text="清理缓存，让您的手机运行的更快"/>
+            <TextView
+                android:id="@+id/system_ClearCache.onekeyClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dip"
+	            android:layout_marginRight="10dip" 
+	            android:background="@drawable/software_btn_function"
+                android:text="@string/ClearCache.onekeyClear.Str" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/system_clear_cache_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/listview_line_diver"
+                android:dividerHeight="2dp" />
+
+            <TextView
+                android:id="@+id/system_clear_cache_noCacheData"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/ClearCache.noCacheData.Str"
+                android:visibility="gone" />
+             <include layout="@layout/listview_divider" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

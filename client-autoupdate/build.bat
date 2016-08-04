@@ -1,0 +1,2 @@
+mvn -f E:\workspace\plugin\code\client-autoupdate\pom.xml clean install -Psign
+cp E:\data\mavenRepository\com\plugin\client\autoupdate\plugin-client-autoupdate\1.0.5\plugin-client-autoupdate-1.0.5-aligned.apk E:\workspace\plugin\code\client-autoupdate-basic\assets\libs\libBase.dll

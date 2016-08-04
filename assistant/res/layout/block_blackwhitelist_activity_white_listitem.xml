@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:orientation="vertical" 
+	android:layout_width="fill_parent" 
+	android:gravity="bottom"
+	android:layout_height="wrap_content" 
+	android:paddingTop="3dp"
+	android:paddingBottom="3dp"
+	android:paddingLeft="10dp" 
+	android:paddingRight="10dp">
+	<TextView android:id="@+id/block_blackwhitelist_white_listitem_nicename_txt"
+		android:layout_height="wrap_content"
+		android:textColor="#000000" 
+		android:textSize="16dp"
+		android:layout_width="wrap_content" />
+	<TextView android:id="@+id/block_blackwhitelist_white_listitem_phone_txt"  
+	    android:textColor="@color/txt_label_black" 
+	    android:textSize="12dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="3dp"
+		android:layout_width="wrap_content"  />
+</LinearLayout>

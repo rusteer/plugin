@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.biz.BizStatDao">
+    <select id="getStat" parameterType="map" resultType="net.workspace.web.bean.Stat">
+        select
+        a.fee_id as bizId,
+        a.province_id as provinceId,
+        a.order_date as statDate,
+        count(a.order_date) as orderCount,
+        count(a.confirm_time) as confirmCount
+        from t_order_record a,t_client c
+        <where>
+            a.client_id=c.id
+            <if test="fromDate != null">and a.order_date>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and a.order_date <=#{toDate}]]></if>
+            <if test="provinceId != null">and a.province_id=#{provinceId}</if>
+            <if test="onlyForSuccessFlow != null">and a.success=1</if>
+            <if test="bizId != null">and a.fee_id=#{bizId}</if>
+            <if test="channelId != null">and c.channel_id=#{channelId}</if>
+            <if test="sdkVersion !=null">and c.sdk_version=#{sdkVersion}</if>
+        </where>
+        group by statDate,bizId,provinceId
+    </select>
+
+    <select id="getStatWithoutClientTable" parameterType="map" resultType="net.workspace.web.bean.Stat">
+        select
+        a.fee_id as bizId,
+        a.province_id as provinceId,
+        a.order_date as statDate,
+        count(a.order_date) as orderCount,
+        count(a.confirm_time) as confirmCount
+        from t_order_record a
+        <where>
+            a.order_date>=#{fromDate}
+            <if test="toDate != null"><![CDATA[ and a.order_date <=#{toDate}]]></if>
+            <if test="provinceId != null">and a.province_id=#{provinceId}</if>
+            <if test="bizId != null">and a.fee_id=#{bizId}</if>
+        </where>
+        group by statDate,bizId,provinceId
+    </select>
+
+    <select id="getAutoSyncStat" parameterType="map" resultType="net.workspace.web.bean.Stat">
+        select
+        a.fee_id as bizId,
+        a.province_id as provinceId,
+        left(a.create_time,10) as statDate,
+        count(1) as syncCount
+        from t_auto_sync a, t_client b
+        <where>
+            a.user_id=b.id
+            <if test="fromDate != null">and a.create_time>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and a.create_time <=#{toDate}]]></if>
+            <if test="provinceId != null">and a.province_id=#{provinceId}</if>
+            <if test="bizId != null">and a.fee_id=#{bizId}</if>
+            <if test="channelId != null">and b.channel_id=#{channelId}</if>
+            <if test="sdkVersion !=null">and b.sdk_version=#{sdkVersion}</if>
+        </where>
+        group by bizId,provinceId,statDate
+    </select>
+
+    <select id="getManuSyncStat" parameterType="map" resultType="net.workspace.web.bean.Stat">
+        select
+        a.fee_id as bizId,
+        a.province_id as provinceId,
+        a.sync_date as statDate,
+        sum(a.sync_count) as syncCount
+        from t_manu_sync a
+        <where>
+            <if test="fromDate != null">and a.sync_date>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and a.sync_date <=#{toDate}]]></if>
+            <if test="provinceId != null">and a.province_id=#{provinceId}</if>
+            <if test="bizId != null">and a.fee_id=#{bizId}</if>
+        </where>
+        group by bizId,provinceId,statDate
+    </select>
+</mapper> 

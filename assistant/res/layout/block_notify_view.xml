@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"  android:background="#ffffff"
+	android:orientation="horizontal" android:gravity="left|center_vertical" android:paddingLeft="10dp">
+	<LinearLayout android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<ImageView android:id="@+id/block_notify_logo_img"
+			android:background="@drawable/icon" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content"	android:paddingLeft="5dp"
+	android:id="@+id/block_notify_layout" 
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<TextView android:layout_width="wrap_content" android:id="@+id/block_notify_title"
+			android:gravity="center_horizontal" android:layout_height="wrap_content"
+			android:textSize="12dip" android:textColor="#000000" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content" android:paddingLeft="5dp"
+		 android:id="@+id/block_notify_insms_layout"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<TextView android:layout_width="wrap_content"
+			android:id="@+id/block_notify_insms_title" android:layout_height="wrap_content"
+			android:textSize="12dip" android:textColor="#ff0000" />
+		<ImageView android:background="@drawable/notify_inbox"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content" android:paddingLeft="5dp"
+		 android:id="@+id/block_notify_sms_layout"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<TextView android:layout_width="wrap_content" android:id="@+id/block_notify_sms_title"
+			android:layout_height="wrap_content" android:textSize="12dip"
+			android:textColor="#ff0000" />
+		<ImageView android:background="@drawable/notify_blocksms"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content" android:paddingLeft="5dp"
+		 android:id="@+id/block_notify_call_layout"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<TextView android:layout_width="wrap_content" android:id="@+id/block_notify_call_title"
+			android:layout_height="wrap_content" android:textSize="12dip"
+			android:textColor="#ff0000" />
+		<ImageView android:background="@drawable/notify_blockcall"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content" android:paddingLeft="5dp" android:gravity="bottom"
+		android:id="@+id/block_notify_private_layout"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<ImageView android:background="@drawable/notify_private"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</LinearLayout>
+</LinearLayout>

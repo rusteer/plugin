@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#edf3f7">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+       	android:background="@drawable/phone_call_phone_title_click_bg" >
+       	<Button
+		    android:id="@+id/call_phone"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:scaleType="centerInside"
+	    	android:text="@string/phone_call_phone_value"
+	    	android:background="#00000000"
+	    	android:drawableTop="@drawable/phone_call_phone_src"
+	    	android:layout_marginTop="2dp"
+	    	android:gravity="center"
+	    	android:layout_weight="1"
+	    />
+       	<ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/phone_title_line" />
+		<Button
+		    android:id="@+id/address_book"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:drawableTop="@drawable/phone_address_book_src"
+	    	android:background="#00000000"
+	    	android:scaleType="centerInside"
+	    	android:layout_weight="1"
+	    	android:layout_marginTop="2dp"
+	    	android:text="@string/phone_address_book_value"
+	    	android:layout_marginLeft="2dp"
+	    	android:gravity="center"
+	    />
+		<ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/phone_title_line" />
+		<Button
+		    android:id="@+id/phone_record"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:background="#00000000"
+	    	android:scaleType="centerInside"
+	    	android:layout_weight="1"
+	    	android:text="@string/phone_phone_record_value"
+	    	android:drawableTop="@drawable/phone_record_src"
+	    	android:layout_marginLeft="2dp"
+	    	android:layout_marginTop="2dp"
+	    	android:gravity="center"
+	    />
+    </LinearLayout>
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="2dp"
+	    android:layout_below="@id/linearLayout1"
+	    android:background="#52a0db">
+	</RelativeLayout>
+    <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:layout_below="@id/linearLayout1"
+        android:src="@drawable/phone_click" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:flipInterval="30"
+        android:layout_below="@id/cursor"
+        android:persistentDrawingCache="animation" />
+
+</RelativeLayout>

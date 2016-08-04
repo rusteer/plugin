@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/smssession_main_layout"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/main_bg0">
+	<RelativeLayout android:layout_width="fill_parent"
+			android:background="@drawable/tab_title" 
+			android:layout_height="wrap_content"  >
+			<ImageView android:id ="@+id/back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true" 
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back" />
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/back"
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back_line" />
+			<TextView  android:text="短信设置"
+			    android:layout_width="wrap_content"
+				android:textSize="22dp"
+				android:gravity="center" android:layout_centerInParent="true"
+				android:textColor="#ffffff" android:layout_height="wrap_content"  />
+	</RelativeLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal">
+		<LinearLayout android:id="@+id/left_content_parent" 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="horizontal"
+			android:padding="8.0dp" 
+			android:layout_weight="1"
+			android:gravity="center"
+			android:background="@drawable/sms_txt_select_bg">
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" 
+				android:orientation="vertical"
+				android:id="@+id/left_content_layout" 
+				android:padding="5.0dp" 
+				android:background="@drawable/sms_bg_type1_in"
+				android:gravity="center">
+				<TextView  android:id="@+id/left_content_txt" 
+				    android:text="接收短信"
+				    android:layout_width="wrap_content"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:textColor="#000000" android:layout_height="wrap_content"  />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:id="@+id/right_content_parent" 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="horizontal"
+			android:padding ="8.0dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:background="@drawable/sms_txt_select_bg1">
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" 
+				android:orientation="vertical"
+				android:id="@+id/right_content_layout" 
+				android:padding="5.0dp" 
+				android:background="@drawable/sms_bg_type6_out"
+				android:gravity="center">
+				<TextView  android:id="@+id/right_content_txt" 
+				    android:text="发送短信"
+				    android:layout_width="wrap_content"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:textColor="#000000" android:layout_height="wrap_content"  />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+	<include layout="@layout/listview_divider" />
+	<ScrollView
+	    android:id="@+id/smssession_scroll_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:scrollbars="vertical"
+		android:fillViewport="true"
+		android:layout_weight="1">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="vertical">
+			<LinearLayout 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:orientation="horizontal"
+				android:paddingLeft="10.0dp" 
+				android:paddingRight="10.0dp"
+				android:paddingBottom="10dp"
+				android:paddingTop="10dp"
+				android:gravity="left|center_vertical">
+				<TextView 
+				    android:text="字体大小"
+				    android:layout_width="wrap_content"
+					android:textSize="16dp"
+					android:layout_weight="1"
+					android:textColor="#000000" android:layout_height="wrap_content"  />
+				<ImageView android:id ="@+id/delete_txtsize"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/sms_txtsize_delete_btn" />
+				<ImageView android:id ="@+id/add_txtsize"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/sms_txtsize_add_btn" />
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:orientation="horizontal"
+				android:paddingLeft="10.0dp" 
+				android:paddingRight="10.0dp"
+				android:paddingTop="10dp">
+				<TextView 
+				    android:text="字体颜色"
+				    android:layout_width="wrap_content"
+					android:textSize="16dp"
+					android:textColor="#000000" android:layout_height="wrap_content"  />
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:orientation="vertical"
+					android:layout_weight="1"
+					android:layout_gravity="left|center_vertical"
+					android:gravity="center"
+					android:paddingLeft="5.0dp" >
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:orientation="horizontal"
+						android:paddingBottom="10dp"
+						android:gravity="center">
+						<SeekBar
+		                    android:id="@+id/red_set"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center"
+		                    android:max="255"
+		                    android:paddingRight="12dp"
+		                    android:paddingLeft="12dp"
+		                    android:progressDrawable="@drawable/sms_seek_bar_red"
+		                    android:thumb="@drawable/sms_seekbar_bar" 
+		                    android:layout_weight="1"/>
+						<TextView 
+						    android:id="@+id/red_set_number"
+						    android:text="0"
+						    android:gravity="center"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content" 
+							android:textColor="#000000" 
+							android:focusable="false"
+							android:background="@drawable/sms_txt_font_bg"/>
+					</LinearLayout>
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:orientation="horizontal"
+						android:paddingBottom="10dp"
+						android:gravity="center">
+						<SeekBar
+		                    android:id="@+id/green_set"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center"
+		                    android:max="255"
+		                    android:paddingRight="12dp"
+		                    android:paddingLeft="12dp"
+		                    android:progressDrawable="@drawable/sms_seek_bar_green"
+		                    android:thumb="@drawable/sms_seekbar_bar" 
+		                    android:layout_weight="1"/>
+						<TextView 
+						    android:id="@+id/green_set_number"
+						    android:text="0"
+						    android:gravity="center"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content" 
+							android:textColor="#000000" 
+							android:focusable="false"
+							android:background="@drawable/sms_txt_font_bg"/>
+					</LinearLayout>
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:orientation="horizontal"
+						android:paddingBottom="10dp"
+						android:gravity="center">
+						<SeekBar
+		                    android:id="@+id/blue_set"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center"
+		                    android:max="255"
+		                    android:paddingRight="12dp"
+		                    android:paddingLeft="12dp"
+		                    android:progressDrawable="@drawable/sms_seek_bar_blue"
+		                    android:thumb="@drawable/sms_seekbar_bar" 
+		                    android:layout_weight="1"/>
+						<TextView 
+						    android:id="@+id/blue_set_number"
+						    android:gravity="center"
+						    android:text="0"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content" 
+							android:textColor="#000000" 
+							android:focusable="false"
+							android:background="@drawable/sms_txt_font_bg"/>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:orientation="horizontal"
+				android:paddingLeft="10.0dp" 
+				android:paddingRight="10.0dp"
+				android:paddingBottom="10dp"
+				android:gravity="center">
+				
+				<ImageView android:id ="@+id/txt_color_type1"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type1"/>
+				<ImageView android:id ="@+id/txt_color_type2"
+				   android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type2"/>
+				<ImageView android:id ="@+id/txt_color_type3"
+				   android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type3"/>
+				<ImageView android:id ="@+id/txt_color_type4"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type4"/>
+				<ImageView android:id ="@+id/txt_color_type5"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type5"/>
+				<ImageView android:id ="@+id/txt_color_type6"
+				   android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type6"/>
+				<ImageView android:id ="@+id/txt_color_type7"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type7"/>
+				<ImageView android:id ="@+id/txt_color_type8"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:scaleType="fitXY"
+				    android:background="@drawable/sms_color_type8"/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:orientation="horizontal"
+				android:paddingLeft="10.0dp" 
+				android:paddingRight="10.0dp"
+				android:paddingTop="10dp">
+				<TextView 
+				    android:text="背景风格"
+				    android:layout_width="wrap_content"
+					android:textSize="16dp"
+					android:textColor="#000000" android:layout_height="wrap_content"  />
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:orientation="vertical"
+					android:paddingLeft="5.0dp" 
+					android:layout_weight="1"
+					android:layout_gravity="left|center_vertical"
+					android:gravity="center">
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:orientation="horizontal"
+						android:gravity="center">
+						<ImageView android:id ="@+id/bg_type1"
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_weight="1"
+						    android:layout_centerVertical="true"
+						    android:background="@drawable/sms_bg_type1_dis" />
+						<ImageView android:id ="@+id/bg_type2"
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_weight="1"
+						    android:paddingLeft="5.0dp" 
+						    android:background="@drawable/sms_bg_type2_dis" />
+						<ImageView android:id ="@+id/bg_type3"
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_weight="1"
+						    android:paddingLeft="5.0dp" 
+						    android:background="@drawable/sms_bg_type3_dis" />
+					</LinearLayout>
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:orientation="horizontal"
+						android:paddingTop="5dp"
+						android:gravity="center">
+						<ImageView android:id ="@+id/bg_type4"
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_weight="1"
+						    android:background="@drawable/sms_bg_type4_dis" />
+						<ImageView android:id ="@+id/bg_type5"
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_weight="1"
+						    android:paddingLeft="5.0dp" 
+						    android:background="@drawable/sms_bg_type5_dis" />
+						<ImageView android:id ="@+id/bg_type6"
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_weight="1"
+						    android:paddingLeft="5.0dp" 
+						    android:background="@drawable/sms_bg_type6_dis" />
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout android:orientation="horizontal" android:gravity="center"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/ok_btn"
+		android:background="@drawable/block_blackwhitelist_add"
+		android:focusable="true" android:clickable="true"
+		android:layout_marginBottom="3dp">
+		<LinearLayout android:orientation="horizontal" 
+		    android:gravity="center"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:text="保存修改"
+				android:layout_marginLeft="10dp"
+				android:textColor="#000000" 
+				android:gravity="center"/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
+

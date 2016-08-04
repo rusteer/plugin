@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/instructions" android:layout_weight="100.0" />
+    <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/newGame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/new_game" android:layout_weight="50.0" />
+    <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/moreGame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/more_title" android:layout_weight="50.0" />
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20.0dp" 
+	android:paddingRight="20.0dp" >
+	 <TextView android:text="@string/private_setting_SMS" 
+		    android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp"
+			android:paddingTop="5.0dp"
+			android:paddingBottom="5.0dp"
+			android:textSize="20dp"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" 
+			android:textColor="@color/white"
+			android:gravity="left" android:background="@drawable/block_mode_set_title_bg" />
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/block_mode_set_body_bg"
+        android:orientation="vertical"
+        android:paddingBottom="5.0dp"
+        android:paddingTop="5.0dp" >
+        <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp">
+	        <LinearLayout android:orientation="vertical" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_weight="1">
+				<RadioGroup android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<RadioButton android:id="@+id/private_reply_1_rbtn"
+						android:layout_width="wrap_content" android:text="我正在开会，一会儿联系你"
+						android:layout_height="wrap_content"  android:textColor="@color/txt_label_blue"
+						android:button="@drawable/radio_set_btn"
+						android:textSize="16dp"/>
+					<RadioButton android:id="@+id/private_reply_2_rbtn"
+						android:layout_width="wrap_content" android:text="我在路上，晚些联系你"
+						android:layout_height="wrap_content"  android:textColor="@color/txt_label_blue"
+						android:button="@drawable/radio_set_btn" android:textSize="16dp"/>
+					<RadioButton android:id="@+id/private_reply_3_rbtn"
+						android:layout_width="wrap_content" android:text="我现在不方便，稍后回电话"
+						android:layout_height="wrap_content"  android:textColor="@color/txt_label_blue"
+						android:button="@drawable/radio_set_btn" android:textSize="16dp"/>
+					<RadioButton android:id="@+id/private_reply_4_rbtn"
+						android:layout_width="wrap_content" android:text="我马上就到"
+						android:layout_height="wrap_content"  android:textColor="@color/txt_label_blue"
+						android:button="@drawable/radio_set_btn" android:textSize="16dp"/>
+				</RadioGroup>
+			</LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/alertdialog_divider" />
+		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" 
+            android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp">
+			 
+			<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+                <TextView
+	                android:id="@+id/private_setting_reply_OK_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/alertdialog_btn"
+	                android:gravity="center"
+	                android:text="@string/batteryManager.submit.str"
+	                android:textColor="@color/black"
+	                android:textSize="16dp" />
+			</LinearLayout>
+			<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+                 <TextView 
+	                android:id="@+id/private_setting_reply_Cancel_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10sp"
+	                android:background="@drawable/alertdialog_btn"
+	                android:gravity="center"
+	                android:textColor="@color/black"
+	                android:text="@string/batteryManager.cancel.str"
+	                android:textSize="16dp" />
+			</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+#
+# This obfuscation dictionary contains quotes from plays by Shakespeare.
+# It illustrates that any text can be used, for whatever flippant reasons
+# one may have.
+# Usage:
+#     java -jar proguard.jar ..... -obfuscationdictionary shakespeare.txt
+#
+
+
+"aux Aux aUx AUx auX AuX aUX AUX AUX con Con cOn COn coN CoN CON CON nul Nul nUl NUl  NuL nUL NUL NUL prn Prn pRn  prN PrN pRN PRN PRN com1 Com1 cOm1 COm1 coM1"
+" CoM1 cOM1 COM1 COM1 com2  cOm2 COm2 coM2 CoM2 cOM2  COM2 com3 Com3 cOm3 COm3"
+"FUCK FUCk FUck Fuck fuck fucK fuCK fUCK FUck FUcK"
+"oOo oOOo ooo oOoo "
+"apktool dex2jar jad yingjad jdgui jode"
+"homosex,faggotry,buggery,sodomy,pederasty"
+

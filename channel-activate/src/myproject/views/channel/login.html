@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/static/img/favicon.png">
+    <title>Report Signin</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <form class="form-signin" role="form" method="post" action="/channel/login">
+        <h2 class="form-signin-heading">请登录</h2>
+        <input name="name" type="text" class="form-control" placeholder="登录名" required autofocus>
+        <input name="password" type="password" class="form-control" placeholder="密码" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+        <span class="label label-danger">${.flash.error}</span>
+    </form>
+</div>
+</body>
+</html>

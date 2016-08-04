@@ -1,0 +1,14 @@
+ <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/system_itemlist_icon_kill_pressed"/>
+    <item
+        android:drawable="@drawable/system_itemlist_icon_kill_default" />
+</selector> 
+
+
+
+
+
+
+

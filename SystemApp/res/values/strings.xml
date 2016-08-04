@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">手电筒</string>
+    <string name="again_exit">再按一次退出</string>
+    <string name="error_hint">摄像头被其他应用占用，请先关闭照相机或者其他手电筒应用!</string>
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+    <string name="exit">退出手电筒?</string>
+</resources>

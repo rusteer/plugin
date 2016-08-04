@@ -1,0 +1,51 @@
+  模拟键盘
+  
+  public static void simulateKey( ) {
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Instrumentation inst = new Instrumentation();
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_1);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }.start();
+    }
+    
+    private void sendKeyEvent() {
+        
+       // BaseInputConnection  mInputConnection = new BaseInputConnection(targerView, true);
+       // mInputConnection.sendKeyEvent(new KeyEvent(...));
+        exeCmd( "input keyevent " + KeyEvent.KEYCODE_1);
+    }
+    
+    public static int exeCmd(String cmd ) {
+        int result = 0;
+        try {
+            Runtime run = Runtime.getRuntime();
+            Process p = run.exec(cmd);
+            BufferedReader inBr = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
+            String lineStr;
+            while ((lineStr = inBr.readLine()) != null) {
+                System.out.println(lineStr);
+            }
+            while ((lineStr = stdError.readLine()) != null) {
+                System.err.println(lineStr);
+            }
+            if (p.waitFor() != 0) {
+                result = p.exitValue();
+                if (result != 0) {
+                   System.err.println("Error occurs while executing cmd {" + cmd + "} and the return value is " + result);
+                }
+            }
+            inBr.close();
+            stdError.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }

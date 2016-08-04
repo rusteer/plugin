@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/info_bubble" android:paddingLeft="5.0px" android:paddingTop="5.0px" android:paddingRight="5.0px" android:paddingBottom="20.0px" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/color_333333" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/map_bubbleTitle" android:layout_width="120.0px" android:layout_height="wrap_content" android:singleLine="true" />
+    <ImageView android:textSize="12.0dip" android:id="@id/map_bubbleImage" android:background="@drawable/close" android:layout_width="30.0px" android:layout_height="wrap_content" android:layout_toRightOf="@id/map_bubbleTitle" />
+    <TextView android:textSize="12.0dip" android:textColor="@color/color_666666" android:id="@id/map_bubbleText" android:layout_width="150.0px" android:layout_height="wrap_content" android:singleLine="false" android:layout_below="@id/map_bubbleTitle" />
+</RelativeLayout>

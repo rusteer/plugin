@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/me_dlg_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="21.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="Exit Game" />
+    <RelativeLayout android:id="@id/app1" android:background="@drawable/me_dlg_item_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip">
+        <ImageView android:id="@id/icon1" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/down1" android:background="@drawable/me_down" android:layout_width="52.0dip" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/app_name1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/down1" android:layout_toRightOf="@id/icon1" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/app2" android:background="@drawable/me_dlg_item_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="3.0dip">
+        <ImageView android:id="@id/icon2" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/down2" android:background="@drawable/me_down" android:layout_width="52.0dip" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/app_name2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/down2" android:layout_toRightOf="@id/icon2" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="85.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="85.0dip" android:layout_centerHorizontal="true">
+            <Button android:layout_gravity="center_vertical" android:id="@id/btn_yes" android:background="@drawable/me_yes_selector" android:layout_width="79.0dip" android:layout_height="43.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+            <Button android:layout_gravity="center_vertical" android:id="@id/btn_more" android:background="@drawable/me_more_selector" android:layout_width="79.0dip" android:layout_height="43.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+            <Button android:layout_gravity="center_vertical" android:id="@id/btn_no" android:background="@drawable/me_no_selector" android:layout_width="79.0dip" android:layout_height="43.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

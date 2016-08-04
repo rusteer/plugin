@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/smssession_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg0"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_title" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/back"
+            android:src="@drawable/back_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="短信"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msg_body_title"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/smssession_main_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/smssession_scroll_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <main.ui.GuesterLinearLayout
+            android:id="@+id/smssession_content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+        </main.ui.GuesterLinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/phone_send_bg_message"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <ImageView
+            android:id="@+id/select_expression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:src="@drawable/expression_btn" />
+
+       <LinearLayout android:layout_width="wrap_content" 
+			android:layout_weight="1" android:layout_height="wrap_content"
+			android:orientation="vertical" android:gravity="right|bottom"
+			android:layout_marginBottom="5dp"
+			>
+			
+			<TextView android:layout_width="wrap_content" 
+				android:textSize="10dp" android:textColor="#000000"
+				android:layout_height="wrap_content" android:id="@+id/smssession_msglen_txt" />
+			<EditText android:id="@+id/smssession_msg_txt" android:background="@drawable/phone_send_conteng_bg"
+				android:layout_width="fill_parent" android:autoLink="all"
+				android:layout_height="wrap_content" android:gravity="top|left"
+				android:hint="输入内容"></EditText>
+			
+			
+				
+		</LinearLayout>
+
+        <Button
+            android:id="@+id/smssession_send_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ff2e3d47"
+            android:background="@drawable/phone_send_bg"
+            android:gravity="center"
+            android:text="发送" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/myGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="105dp"
+        android:background="#00000000"
+        android:columnWidth="24dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:visibility="gone" />
+
+</LinearLayout>

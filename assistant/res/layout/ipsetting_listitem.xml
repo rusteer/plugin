@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:gravity="center_vertical" 
+	android:paddingLeft="10dp" android:paddingRight="10dp"
+	android:paddingTop="3dp" android:paddingBottom="3dp">
+	<LinearLayout 
+		android:orientation="vertical" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:gravity="center_vertical"
+		android:layout_weight="1">
+		<TextView android:textSize="16dp"
+		    android:id="@+id/ipsetting_listitem_name_txt"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:textColor="@color/black"/>
+		<TextView android:id="@+id/ipsetting_listitem_IPnumber_txt"
+		    android:textSize="12dp"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textColor="@color/txt_label_black"
+			android:layout_marginTop="3dp"/>	
+	</LinearLayout>
+	<CheckBox android:layout_width="wrap_content" android:focusable="false" android:clickable="false"
+		android:layout_height="wrap_content" android:layout_gravity="right"  style="@style/MyCheckBox"
+		android:id="@+id/ipsetting_listitem_cbox" />  
+</LinearLayout>

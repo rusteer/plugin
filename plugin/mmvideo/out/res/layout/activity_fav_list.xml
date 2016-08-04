@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <RelativeLayout android:gravity="left" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="2.0dip">
+            <ImageView android:id="@id/leftBtnImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:src="@drawable/btn_back_click" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="20.0sp" android:textColor="#ff989898" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/title_activity_fav_list" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <Button android:textSize="16.0sp" android:textColor="#ffb9b9b9" android:id="@id/btnTodayNew" android:background="@color/transparent" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="12.0dip" android:text="今日更新" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            <Button android:textSize="16.0sp" android:textColor="#ffb9b9b9" android:id="@id/btnTommoryNew" android:background="@color/transparent" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="明日更新" android:layout_below="@id/btnTodayNew" android:layout_alignLeft="@id/btnTodayNew" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:gravity="top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ListView android:gravity="left" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="0.0dip" android:cacheColorHint="#00000000" android:horizontalSpacing="10.0dip" android:verticalSpacing="20.0dip" android:stretchMode="columnWidth" android:numColumns="2" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

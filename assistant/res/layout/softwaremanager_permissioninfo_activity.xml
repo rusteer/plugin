@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 软件权限列表信息界面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        style="@style/system_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_title" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/back" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/back"
+                android:src="@drawable/back_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/softwareManager.permissioninfo.Str"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+        </RelativeLayout>
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    android:paddingLeft="10dp"
+		    android:paddingRight="10dp"
+		    android:paddingTop="3dp"
+		    android:paddingBottom="3dp">
+			<FrameLayout
+		        android:layout_width="64dip"
+		        android:layout_height="48dip"
+		        android:layout_gravity="left|center">
+		        <ImageView
+		            android:id="@+id/softwareManager_permissioninfo_appcion"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="left|center_vertical"
+		            android:scaleType="centerInside"  />
+		    </FrameLayout>
+			<LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="left|center"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+		
+		        <TextView
+		            android:id="@+id/softwareManager_permissioninfo_appName"
+		            android:layout_width="fill_parent" 
+		            android:layout_height="wrap_content"
+		            android:gravity="left|center"
+		            android:textSize="16dp"
+		            android:singleLine="true"
+		            android:ellipsize="end"
+		            android:textColor="@color/black"/>
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="fill_parent"
+		            android:orientation="horizontal" 
+		            android:layout_gravity="left|center"
+		            android:paddingTop="3dp">
+		            <TextView
+		                android:text="@string/softwareManager.version.Str"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="@color/txt_label_black"
+		                android:textSize="12dp" />
+		            <TextView
+		                android:id="@+id/softwaremanager_permissionmanager_version"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="0"
+		                android:textColor="@color/txt_label_black"
+		                android:textSize="12dp" />
+		        </LinearLayout>
+		    </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32sp"
+                android:background="@drawable/system_task_header_bg"
+                android:gravity="left|center"
+                android:text="软件所需权限"
+                android:textColor="@color/txt_label_blue"
+                android:textSize="14dip" 
+                android:paddingLeft="10dp"/>
+
+            <ListView
+                android:id="@+id/softwareManager_permissioninfo_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/listview_line_diver"
+                android:dividerHeight="2dp" />
+             <include layout="@layout/listview_divider" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

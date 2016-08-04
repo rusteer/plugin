@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.biz.BizStatusMyBatisDao">
+
+    <update id="increase" parameterType="net.workspace.web.entity.biz.BizStatusEntity">
+        INSERT INTO t_biz_status
+        (biz_id,stat_date,status_code,status_count) VALUES (#{bizId},#{statDate},#{statusCode},1)
+        ON DUPLICATE KEY
+        update status_count=status_count+1
+    </update>
+</mapper> 

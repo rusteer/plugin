@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 软件管理行列表 -->
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/softwaremanager_software_list_item_layout"
+   style="@style/system_list_item_layout">
+  
+  
+       <ImageView 
+       android:id="@+id/softwareManager_software_list_item_icon"
+        android:layout_width="48dip"
+	    android:layout_height="48dip" 
+	    android:layout_weight="1"
+	    android:scaleType="centerInside"
+	    android:layout_gravity="left"
+       />
+  
+       <LinearLayout
+       		    android:layout_gravity="left"
+			    android:orientation="vertical"
+			    android:layout_width="wrap_content"
+			    android:layout_height="fill_parent" 
+			    android:paddingLeft="5sp"
+			    android:layout_weight="3" >
+		  	     	
+			 <TextView 
+			         android:id="@+id/softwareManager_software_list_item_appName"
+		                 style="@style/system_list_item_text_1"  />
+		   	        
+	              <LinearLayout
+		    	   android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="45dip"  
+				    android:layout_weight="1"
+				    android:gravity="left|center" >
+				    
+				       <LinearLayout
+			    	    android:orientation="horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="45dip"  
+					    android:layout_weight="1"
+					    android:gravity="left|center" >
+					          <TextView  
+					    	  style="@style/softmanager_listitem2_text"
+					    	  android:text="@string/softwareManager.version.Str" />
+					    	  <TextView  
+				              android:id="@+id/softwareManager_software_version"
+					    	   style="@style/softmanager_listitem2_text"
+					    	  android:text="1.0" />
+				    	</LinearLayout>
+				    	 <LinearLayout
+				    	    android:orientation="horizontal"
+						    android:layout_width="wrap_content"
+						    android:layout_height="45dip"  
+						    android:layout_weight="1"
+						    android:gravity="right|center" >  
+						         <TextView  
+						    	 style="@style/softmanager_listitem2_text"
+						    	  android:text="@string/softwareManager.volume.Str" />
+						    	  
+						       <TextView  
+					              android:id="@+id/softwareManager_software_volume"
+						    	  style="@style/softmanager_listitem2_text"
+						    	  android:text="0B" />
+				    	  </LinearLayout>
+			     </LinearLayout> 
+  	  </LinearLayout>
+  	  
+
+				   <RadioButton 
+				        android:button="@drawable/software_chk_error_bg"
+				        android:id="@+id/softwareManager_software_list_btn"
+				        android:layout_width="wrap_content"
+					    android:layout_height="wrap_content" 
+					    android:layout_gravity="center"
+					    android:layout_weight="1"
+					    android:focusable="false"
+					    android:layout_marginLeft="30dip"
+					    android:layout_alignParentRight="true"/>
+
+       
+</LinearLayout>

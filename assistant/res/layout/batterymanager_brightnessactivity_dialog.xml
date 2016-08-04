@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:paddingLeft="20.0dp" 
+	android:paddingRight="20.0dp">
+
+    <TextView android:text="@string/batteryManager.ScreenSetting.str" 
+		    android:id="@+id/Components.List.Dialog.Title"
+		    android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp"
+			android:paddingTop="5.0dp"
+			android:paddingBottom="5.0dp"
+			android:textAppearance="?android:textAppearanceLarge"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" 
+			android:textColor="@color/white"
+			android:gravity="left" android:background="@drawable/block_mode_set_title_bg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/block_mode_set_body_bg"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dp"
+        android:paddingTop="10.0dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/batteryManager.Screen.str"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:paddingLeft="20dp"
+                android:paddingTop="3.0dp"
+                android:paddingBottom="3.0dp"
+                android:paddingRight="10.0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/batteryManager.ScreenAutoAdjust.str"
+                    android:textColor="@color/txt_label_blue"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/batteryManager_ScreenAutoAdjust_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/batterymanager_switch_on_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:paddingLeft="30dp"
+                android:paddingTop="3.0dp"
+                android:paddingBottom="3.0dp"
+				android:paddingRight="10.0dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/batterymanager_brightness_min" />
+
+                <SeekBar
+                    android:id="@+id/batterymanager_seekbar_scree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:max="245"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:progressDrawable="@drawable/batterymanager_seekbar"
+                    android:thumb="@drawable/batterymanager_seek_thumb" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/batterymanager_brightness_max" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" 
+            android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp">
+
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/batteryManager.CloseScreenTime.str"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingTop="3.0dp"
+            android:paddingBottom="5.0dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:paddingLeft="5dp"
+                android:paddingTop="3.0dp">
+				 <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" 
+	                android:layout_weight="1">
+		            <TextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/batteryManager.Screen_seekBar_10s.str"
+	                    android:textColor="@color/txt_label_blue"
+	                    android:layout_gravity="center"
+	                    android:textSize="12dp" />
+		            <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:scaleType="centerInside"
+	                    android:src="@drawable/batterymanager_seekbar_time_bar_bg" />
+                </LinearLayout>
+                 <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" 
+	                android:layout_weight="1">
+					<TextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/batteryManager.Screen_seekBar_30s.str"
+	                    android:textColor="@color/txt_label_blue"
+	                    android:layout_gravity="center"
+	                    android:textSize="12dp" />
+		            <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:scaleType="centerInside"
+	                    android:src="@drawable/batterymanager_seekbar_time_bar_bg" />
+                </LinearLayout>
+               <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" 
+	                android:layout_weight="1">
+					<TextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/batteryManager.Screen_seekBar_1min.str"
+	                    android:textColor="@color/txt_label_blue"
+	                    android:layout_gravity="center"
+	                    android:textSize="12dp" />
+		            <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:scaleType="centerInside"
+	                    android:src="@drawable/batterymanager_seekbar_time_bar_bg" />
+                </LinearLayout>
+               <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" 
+	                android:layout_weight="1">
+                	<TextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/batteryManager.Screen_seekBar_5min.str"
+	                    android:textColor="@color/txt_label_blue"
+	                    android:layout_gravity="center"
+	                    android:textSize="12dp" />
+		            <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:scaleType="centerInside"
+	                    android:src="@drawable/batterymanager_seekbar_time_bar_bg" />
+                </LinearLayout>
+               <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" 
+	                android:layout_weight="1">
+                 	<TextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/batteryManager.Screen_seekBar_10min.str"
+	                    android:textColor="@color/txt_label_blue"
+	                    android:layout_gravity="center"
+	                    android:textSize="12dp" />
+		            <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:scaleType="centerInside"
+	                    android:src="@drawable/batterymanager_seekbar_time_bar_bg" />
+                </LinearLayout>
+            </LinearLayout>
+			 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:paddingBottom="3.0dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/batterymanager_time_min" />
+
+                <SeekBar
+                    android:id="@+id/batterymanager_seekbar_CloseScreeTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:max="100"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:progressDrawable="@drawable/batterymanager_seekbar"
+                    android:thumb="@drawable/batterymanager_seek_thumb" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/batterymanager_time_max" />
+            </LinearLayout>
+        </LinearLayout>
+		<include layout="@layout/alertdialog_divider" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+			 
+			<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+                <TextView
+	                android:id="@+id/batteryManager_screen_submit"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/alertdialog_btn"
+	                android:gravity="center"
+	                android:text="@string/batteryManager.submit.str"
+	                android:textColor="@color/black"
+	                android:textSize="16dp" />
+			</LinearLayout>
+			<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+                 <TextView 
+	                android:id="@+id/batteryManager_screen_cancel"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10sp"
+	                android:background="@drawable/alertdialog_btn"
+	                android:gravity="center"
+	                android:textColor="@color/black"
+	                android:text="@string/batteryManager.cancel.str"
+	                android:textSize="16dp" />
+			</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

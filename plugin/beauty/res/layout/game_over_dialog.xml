@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/newGame" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/new_game" />
+    <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/conGame" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/con_game" />
+    <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/moreGame" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/more_title" />
+    <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/quit" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/quit" />
+</LinearLayout>

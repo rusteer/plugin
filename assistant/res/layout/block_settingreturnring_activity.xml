@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/block_mode_set_title_bg"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="5.0dip"
+        android:text="@string/block_setting_returnring_title"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/block_mode_set_body_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:id="@+id/block_settingreturnring_returnring_model_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="5.0dip" >
+
+                <TextView
+                    android:id="@+id/block_settingreturnring_returnring_model_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:text="@string/block_setting_returnring"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/listview_divider" />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/block_set_return0_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:duplicateParentState="true"
+                        android:text="返回音忙"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/block_set_return0_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:button="@drawable/radio_set_btn"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false" />
+                </LinearLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <LinearLayout
+                    android:id="@+id/block_set_return1_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:duplicateParentState="true"
+                        android:text="返回空号"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/block_set_return1_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:button="@drawable/radio_set_btn"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false" />
+                </LinearLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <LinearLayout
+                    android:id="@+id/block_set_return2_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:duplicateParentState="true"
+                        android:text="返回已关机"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/block_set_return2_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:button="@drawable/radio_set_btn"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false" />
+                </LinearLayout>
+
+                <include layout="@layout/listview_divider" />
+
+                <LinearLayout
+                    android:id="@+id/block_set_return3_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:duplicateParentState="true"
+                        android:text="返回已停机"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/block_set_return3_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:button="@drawable/radio_set_btn"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false" />
+                </LinearLayout>
+            </RadioGroup>
+
+            <include layout="@layout/listview_divider" />
+
+            <LinearLayout
+                android:id="@+id/block_settingreturnring_returnring_wait_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:paddingBottom="3.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="5.0dip" >
+
+                <TextView
+                    android:id="@+id/block_settingreturnring_returnring_wait_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/block_setting_returnring_wait"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:id="@+id/block_settingreturnring_returnring_wait_value_cbox"
+                    style="@style/MyCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:clickable="false"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <include layout="@layout/listview_divider" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/block_setting_returnring_summary"
+                    android:textColor="@color/txt_label_black" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

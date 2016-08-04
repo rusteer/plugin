@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.channel.ChannelAccessMyBatisDao">
+    <select id="getList" parameterType="map" resultType="net.workspace.web.entity.channel.ChannelAccessEntity">
+        select
+        stat_date as statDate,
+        access_count as accessCount
+        from t_channel_access a
+        <where>
+            a.channel_id=#{channelId}
+            and a.stat_date>=#{fromDate}
+            and a.stat_date <![CDATA[<=]]>#{toDate}
+        </where>
+        order by statDate desc
+    </select>
+
+    <select id="getAccess" parameterType="map" resultType="net.workspace.web.entity.channel.ChannelAccessEntity">
+        select
+        stat_date as statDate,
+        access_count as accessCount
+        from t_channel_access a
+        <where>
+            a.channel_id=#{channelId}
+            and a.stat_date=#{date}
+        </where>
+    </select>
+
+    <update id="increaseAccessCount" parameterType="net.workspace.web.entity.channel.ChannelAccessEntity">
+        INSERT INTO t_channel_access
+        ( channel_id,stat_date,access_count) VALUES (#{channelId},#{statDate},1)
+        ON DUPLICATE KEY
+        update access_count=access_count+1
+    </update>
+</mapper> 

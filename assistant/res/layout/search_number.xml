@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/search_number_layout"
+	android:layout_height="fill_parent" android:background="@drawable/main_bg0"
+	>
+	<RelativeLayout android:layout_width="fill_parent"
+			android:background="@drawable/tab_title" 
+			android:layout_height="wrap_content"  >
+			<ImageView android:id ="@+id/back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true" 
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back" />
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/back"
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back_line" />
+			<TextView  android:id="@+id/search_number_title"
+			    android:text="归属地查询"
+			    android:layout_width="wrap_content"
+				android:textSize="22dp"
+				android:gravity="center" android:layout_centerInParent="true"
+				android:textColor="#ffffff" android:layout_height="wrap_content"  />
+	</RelativeLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:orientation="horizontal" 
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:background="@drawable/keywords_add_bg">
+		<EditText
+			android:id="@+id/search_number_txt"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textSize="16dp"
+			android:textColor="@color/txt_label_black"
+			android:text=""
+			android:hint="输入号码/区号/邮编/城市"
+			android:background="@drawable/keywords_input"
+			android:singleLine="true"
+			android:gravity="left|center"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="3dp"
+			android:layout_marginBottom="5dp"
+			android:layout_weight="1"
+			android:paddingLeft="10dp"/>
+		<Button android:background="@drawable/search_number_btn" 
+		    android:id="@+id/search_number_rbt" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_margin="3dp"
+			android:layout_marginRight="10dp"
+			android:text="查询"
+			android:textColor="@color/black"
+			android:textSize="16dp"
+			android:layout_gravity="center|right"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:background="@drawable/msg_content_tips"
+		android:orientation="horizontal" android:layout_height="wrap_content"
+		android:gravity="center_vertical">
+		<TextView  android:text="查询信息"
+		    android:layout_width="wrap_content"
+			android:textSize="16dp"
+			android:textColor="#016fae" 
+			android:layout_margin="10dp"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:orientation="vertical" android:layout_height="wrap_content" android:padding="10dip"
+		android:layout_weight="1">
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="50dip"
+			android:gravity="center_vertical">
+			<TextView android:textColor="@color/black"
+				android:textAppearance="?android:textAppearanceMedium" android:text="号码:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			<TextView android:textAppearance="?android:textAppearanceMedium"
+			    android:layout_marginLeft="10dp"
+				android:id="@+id/search_number_num_txt" android:textColor="#016fae"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</LinearLayout>
+		<include layout="@layout/listview_divider" />
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="50dip"
+			android:gravity="center_vertical">
+			<TextView android:textColor="@color/black"
+				android:textAppearance="?android:textAppearanceMedium" android:text="归属:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			<TextView android:textAppearance="?android:textAppearanceMedium"
+			    android:layout_marginLeft="10dp"
+				android:id="@+id/search_number_address_txt" android:textColor="#016fae"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</LinearLayout>
+		<include layout="@layout/listview_divider" />
+
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="50dip"
+			android:gravity="center_vertical">
+			<TextView android:textColor="@color/black"
+				android:textAppearance="?android:textAppearanceMedium" android:text="类型:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			<TextView android:textAppearance="?android:textAppearanceMedium"
+			    android:layout_marginLeft="10dp"
+				android:id="@+id/search_number_type_txt" android:textColor="#016fae"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</LinearLayout>
+		<include layout="@layout/listview_divider" />
+	</LinearLayout>
+	
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.biz.BizMyBatisDao">
+    <select id="getWhiteKeywords" parameterType="map" resultType="java.lang.String">
+        select t1.keyword from t_biz t1,t_stat_fee_client t2
+        <where>
+            t2.fee_id=t1.id
+            and t2.mobile=#{mobile}
+            and t1.payment_type=2
+            and t2.last_fee_time>#{validTime}
+        </where>
+    </select>
+</mapper>

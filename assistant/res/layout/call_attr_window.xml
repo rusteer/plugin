@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="wrap_content"
+	android:paddingLeft="10dp"
+	android:paddingTop="3dp" android:paddingBottom="3dp" 
+	android:gravity="center_horizontal|center_vertical"
+	android:layout_height="wrap_content" android:clickable="true"
+	android:background="@drawable/call_attr_bg">
+	<LinearLayout android:orientation="vertical" 
+	    android:id="@+id/call_attr_window_record_layout"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:gravity="center">
+		<ImageView android:layout_width="wrap_content" 
+		    android:id="@+id/call_attr_window_record_img"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/unrecord" 
+			android:paddingLeft="6dp"
+			android:paddingRight="6dp"/>
+		<TextView 
+		    	android:layout_marginTop="3dp"
+		    	android:text="点击录音"
+		    	android:id="@+id/call_attr_window_record_txt"
+				android:textColor="@color/black" android:layout_width="wrap_content"
+				android:textSize="12dp"
+				android:layout_height="wrap_content" />
+	</LinearLayout>
+	<ImageView android:layout_width="wrap_content" 
+	    android:id="@+id/call_attr_window_record_img"
+		android:layout_height="wrap_content" 
+		android:src="@drawable/call_record_line" 
+		android:paddingLeft="10dp" android:paddingRight="10dp" 
+		android:paddingTop="3dp" android:paddingBottom="3dp" />
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<TextView android:id="@+id/call_attr_window_pnumber"
+			android:textColor="@color/black" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView android:id="@+id/call_attr_window_info"
+		    android:layout_marginTop="3dp"
+			android:textColor="#0453c9" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+	<LinearLayout android:orientation="vertical"
+	    android:id="@+id/call_attr_window_layout"
+	    android:layout_gravity="top|right"
+	    android:paddingLeft="10dp" 
+	    android:paddingTop="2dp"
+	    android:paddingRight="5dp"
+	    android:gravity="center_horizontal|center_vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+		<ImageView android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:src="@drawable/call_top_cancel" />
+	</LinearLayout>
+
+</LinearLayout>

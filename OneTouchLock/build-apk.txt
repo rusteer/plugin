@@ -1,0 +1,27 @@
+#!/bin/bash
+###################### how to use script begin############################
+#svn up /workspace/plugin/code/
+#cp /workspace/plugin/code/OneTouchLock/build.sh /tmp/onetouchlock-build.sh
+#chmod 777 /tmp/onetouchlock-build.sh
+#tmp/onetouchlock-build.sh $1
+###################### how to use script end  ############################
+channelId=$1;
+#svn up /workspace/plugin/code/
+rm -rf /tmp/OneTouchLock
+cp -R /workspace/plugin/code/OneTouchLock /tmp/OneTouchLock
+cd /tmp/OneTouchLock
+keytool -genkey -noprompt -v -keystore release/lock.keystore -alias main -keyalg RSA -keysize 2048 -validity 10000 -keypass 123456 -storepass 123456 -dname "CN=axa, OU=bbb, O=cxc, L=dd, S=ee, C=ff"
+###########
+while read i; do echo "$i $RANDOM";done < proguard-keys.txt  | sort -k2n|cut -d" " -f1 > /tmp/proguard-$channelId.txt
+cp /tmp/proguard-$channelId.txt  proguard-keys.txt
+############
+cat src/workspace/main/Variables.java | sed s/228213228/$channelId/ > /tmp/Variables-$channelId.txt
+cp /tmp/Variables-$channelId.txt src/workspace/main/Variables.java
+mvn clean install -Psign
+############
+dateFlag=$(date +%Y-%m-%d)
+fileName=update.l3721.com/onetouchlock-$channelId-$dateFlag.apk
+mv ~/.m2/repository/com/jgames/onetouchlock/onetouchlock/1.0.1/onetouchlock-1.0.1-aligned.apk /var/www/nginx/$fileName
+######
+echo "http://$fileName"
+ 

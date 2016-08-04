@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.client.ClientMyBatisDao">
+    <select id="getSdkVersionList" resultType="Integer">
+        select distinct
+        sdk_version from t_client
+    </select>
+
+    <select id="getChannelClientCount" parameterType="long" resultType="long">
+        select count(1) from t_client where channel_id=#{channelId}
+    </select>
+
+    <select id="getDailyNewCount" parameterType="map"
+            resultType="net.workspace.web.bean.DateClientCount">
+        select
+        a.create_date as statDate,
+        count(phone_number) as clientCount
+        from t_client a
+        <where>
+            <!-- carrier_operator=1 -->
+            <if test="provinceId != null">and a.province_id=#{provinceId}</if>
+            <if test="channelId != null">and a.channel_id=#{channelId}</if>
+            <if test="fromDate != null">and a.create_date>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and a.create_date <=#{toDate}]]></if>
+            <if test="carrierOperator !=null">and a.carrier_operator=#{carrierOperator}</if>
+            <if test="sdkVersion !=null">and a.sdk_version=#{sdkVersion}</if>
+        </where>
+        group by statDate order by statDate desc
+    </select>
+
+    <select id="getDailyReactivateCount" parameterType="map" resultType="net.workspace.web.bean.DateClientCount">
+        select
+        b.reactivate_date as statDate,
+        count(a.phone_number) as clientCount
+        from t_client a, t_client_reactivate b
+        <where>
+            <!-- carrier_operator=1 -->
+            a.id=b.client_id
+            <if test="provinceId != null">and a.province_id=#{provinceId}</if>
+            <if test="carrierOperator !=null">and a.carrier_operator=#{carrierOperator}</if>
+            <if test="sdkVersion !=null">and a.sdk_version=#{sdkVersion}</if>
+            <if test="channelId != null">and b.new_channel_id=#{channelId}</if>
+            <if test="fromDate != null">and b.reactivate_date>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and b.reactivate_date <=#{toDate}]]></if>
+        </where>
+        group by statDate order by statDate desc
+    </select>
+
+
+    <select id="getChannelReactivateCount" parameterType="map" resultType="net.workspace.web.bean.ChannelStat">
+        select
+        a.channel_id as channelId,
+        count(a.phone_number) as reActivateCount
+        from t_client a, t_client_reactivate b
+        <where>
+            a.id=b.client_id
+            <if test="provinceId != null">and a.province_id=#{provinceId}</if>
+            <if test="carrierOperator !=null">and a.carrier_operator=#{carrierOperator}</if>
+            <if test="sdkVersion !=null">and a.sdk_version=#{sdkVersion}</if>
+            <if test="fromDate != null">and b.reactivate_date>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and b.reactivate_date <=#{toDate}]]></if>
+        </where>
+        group by channelId
+    </select>
+
+
+    <select id="getDailyAccessCount" parameterType="map"
+            resultType="net.workspace.web.bean.ClientDailyStat">
+        select
+        t2.create_date as createDate,
+        t1.access_date as statDate,
+        count(t1.id) as statCount
+        from t_stat_access t1, t_client t2
+        <where>
+            t1.client_id = t2.id
+            <if test="toDate != null">and t1.access_date = #{toDate}</if>
+            and t2.create_date >=#{fromDate}
+            and t2.phone_number is not null
+            <if test="channelId != null">and t2.channel_id=#{channelId}</if>
+            <if test="provinceId != null">and t2.province_id=#{provinceId}</if>
+            <if test="carrierOperator !=null">and t2.carrier_operator=#{carrierOperator}</if>
+            <if test="sdkVersion !=null">and t2.sdk_version=#{sdkVersion}</if>
+        </where>
+        group by createDate , statDate
+    </select>
+
+    <select id="getProvinceNewCount" parameterType="map"
+            resultType="net.workspace.web.bean.ProvinceClientCount">
+        select
+        province_id as provinceId,
+        count(phone_number) as clientCount
+        from t_client a
+        <where>
+            <!-- carrier_operator=1 -->
+            <if test="channelId != null">and a.channel_id=#{channelId}</if>
+            <if test="fromDate != null">and a.create_date>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and a.create_date <=#{toDate}]]></if>
+            <if test="carrierOperator !=null">and a.carrier_operator=#{carrierOperator}</if>
+            <if test="sdkVersion !=null">and a.sdk_version=#{sdkVersion}</if>
+        </where>
+        group by provinceId
+    </select>
+
+    <select id="getChannelNewCount" parameterType="map" resultType="net.workspace.web.bean.ChannelStat">
+        select
+        channel_id as channelId,
+        count(phone_number) as newClientCount
+        from t_client a
+        <where>
+            <!-- carrier_operator=1 -->
+            <if test="fromDate != null">and a.create_date>=#{fromDate}</if>
+            <if test="toDate != null"><![CDATA[ and a.create_date <=#{toDate}]]></if>
+            <if test="carrierOperator !=null">and a.carrier_operator=#{carrierOperator}</if>
+            <if test="sdkVersion !=null">and a.sdk_version=#{sdkVersion}</if>
+        </where>
+        group by channelId
+    </select>
+
+    <select id="getProvinceAccessCount" parameterType="map" resultType="net.workspace.web.bean.ProvinceClientCount">
+        select
+        b.province_id as provinceId,
+        count(b.phone_number) as clientCount
+        from (select distinct client_id from t_stat_access
+        where
+        access_date>=#{fromDate} and access_date<![CDATA[<=]]>#{toDate})
+        a, t_client b
+        <where>
+            a.client_id=b.id
+            <if test="channelId != null">and b.channel_id=#{channelId}</if>
+            <if test="carrierOperator !=null">and b.carrier_operator=#{carrierOperator}</if>
+            <if test="sdkVersion !=null">and b.sdk_version=#{sdkVersion}</if>
+        </where>
+        group by provinceId
+    </select>
+
+    <select id="getAllAccessClientCountBySingleDate" parameterType="map"
+            resultType="net.workspace.web.bean.DateClientCount">
+        select a.access_date as statDate, count(b.phone_number) as clientCount from t_stat_access a, t_client b
+        <where>
+            a.access_date = '${date}' and a.client_id=b.id
+            <if test="channelId != null">and b.channel_id=${channelId}</if>
+            <if test="provinceId != null">and b.province_id=${provinceId}</if>
+            <if test="carrierOperator !=null">and b.carrier_operator=${carrierOperator}</if>
+            <if test="sdkVersion !=null">and b.sdk_version=${sdkVersion}</if>
+        </where>
+        group by statDate
+    </select>
+
+
+    <select id="getDailyAllAccessClientCount" parameterType="map" resultType="net.workspace.web.bean.DateClientCount">
+        select a.access_date as statDate, count(b.phone_number) as clientCount from t_stat_access a, t_client b
+        <where>
+            a.access_date between '${fromDate}' and '${toDate}'
+            <!--
+			a.access_date>=#{fromDate}
+            <![CDATA[and a.access_date<=#{toDate}]]>
+            -->
+            and a.client_id=b.id
+            <if test="channelId != null">and b.channel_id=${channelId}</if>
+            <if test="provinceId != null">and b.province_id=${provinceId}</if>
+            <if test="carrierOperator !=null">and b.carrier_operator=${carrierOperator}</if>
+            <if test="sdkVersion !=null">and b.sdk_version=${sdkVersion}</if>
+        </where>
+        group by statDate
+    </select>
+</mapper> 

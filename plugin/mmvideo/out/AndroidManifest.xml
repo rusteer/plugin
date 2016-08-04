@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="2" android:versionName="1.1" android:installLocation="preferExternal" package="com.xmedia.mmvideo"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:debuggable="true">
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_main" android:name="com.webuid.mmVideo.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_home" android:name="com.webuid.mmVideo.HomeActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_recommend" android:name="com.webuid.mmVideo.RecommendActivity" android:screenOrientation="portrait" />
+        <activity android:name="RecommendGroupTab" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_rank" android:name="com.webuid.mmVideo.RankActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_my_space" android:name="com.webuid.mmVideo.MySpaceActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_offline" android:name="com.webuid.mmVideo.OfflineActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.PlayerActivity" android:screenOrientation="landscape" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.PlayActivity" android:screenOrientation="landscape" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.PlayVideoActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.PlayListActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.FavListActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.UpdateListActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.SoftListActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.SettingActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.FeedbackActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_player" android:name="com.webuid.mmVideo.ShareActivity" android:screenOrientation="portrait" />
+        <meta-data android:name="UMENG_APPKEY" android:value="54759a3ffd98c50f74000d01" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="zb02" />
+        <service android:name="com.webuid.mmVideo.update.MmUpdateService" />
+        <service android:name="com.webuid.mmVideo.MmVideoService" />
+    </application>
+</manifest>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+  
+  	<FrameLayout
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_gravity="left|center">
+        <ImageView
+            android:id="@+id/softwaremanager_installactionpackage_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:scaleType="centerInside"  />
+    </FrameLayout>
+  	<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_weight="1"
+        android:orientation="vertical" 
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/softwaremanager_installactionpackage_item_appName"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" 
+            android:layout_gravity="left|center"
+            android:paddingTop="3dp">
+            <TextView
+                android:id="@+id/softwaremanager_installactionpackage_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/txt_label_black"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/softwaremanager_installactionpackage_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/txt_label_black"
+                android:textSize="12dp" 
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+   <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:orientation="horizontal" >
+
+        <RadioButton 
+            android:drawableRight="@drawable/software_chk_correct_bg"
+       		android:button="@null"
+       		android:id="@+id/softwaremanager_installactionpackage_item_btn"
+       		android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:gravity="center"
+	    	android:layout_gravity="center|right"
+	    	android:focusable="false" 
+	    	android:clickable="false"/>
+    </LinearLayout>
+</LinearLayout>

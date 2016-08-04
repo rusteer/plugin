@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:background="@drawable/soft_item_bg" android:layout_width="fill_parent" android:layout_height="98.0dip">
+        <ImageView android:id="@id/imagePre" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" android:src="@drawable/photo_select" />
+        <LinearLayout android:orientation="vertical" android:layout_width="176.0dip" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip">
+            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginBottom="4.0dip" android:text="APP名称" />
+            <TextView android:textSize="12.0dip" android:textColor="#ff999999" android:id="@id/subname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="APP简介" />
+        </LinearLayout>
+        <ImageView android:id="@id/imagePre2" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" android:src="@drawable/soft_down" />
+    </LinearLayout>
+</LinearLayout>

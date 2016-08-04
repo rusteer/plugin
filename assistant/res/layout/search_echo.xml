@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" 
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<RadioGroup android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<RadioButton android:id="@+id/search_echo_sms_rbtn"
+				android:layout_width="wrap_content" android:text="发短信"
+				android:layout_height="wrap_content" />
+			<RadioButton android:id="@+id/search_echo_call_rbtn"
+				android:layout_width="wrap_content" android:text="电话呼叫"
+				android:layout_height="wrap_content" />
+		</RadioGroup>
+	</LinearLayout>

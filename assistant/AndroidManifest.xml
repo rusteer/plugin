@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.spirit" android:versionCode="20" android:versionName="2.3.6" >
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />  
+    <uses-permission android:name="android.permission.BROADCAST_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.DELETE_CACHE_FILES" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <!-- 用于下载前检查网络状态 (必须) -->
+    <!-- uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" / -->
+    <!-- uses-permission android:name="android.permission.READ_PHONE_STATE" / -->
+    <!-- wifi  权限 -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <!-- BLUETOOTH 权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+    <!-- apps permission csc -->
+    <application android:name="main.ui.MyApp" android:icon="@drawable/icon" android:label="@string/app_name" android:launchMode="singleTask" android:persistent="true"  android:theme="@style/mywebview" >
+        <activity  android:name="main.ui.MainActivity" android:label="@string/app_name" android:launchMode="singleTask" android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.softwareupdate.SoftUpdate" android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="main.block.ui.Block_SettingModel_Activity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="main.block.ui.Block_SettingReturnRing_Activity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="main.block.ui.Block_Main_Activity" />
+        <activity android:name="main.block.ui.Block_SMSSession_Activity" />
+        <activity android:name="main.block.ui.Block_SMSDel_Activity" />
+        <activity android:name="main.block.ui.Block_SMSRecover_Activity" />
+        <activity android:name="main.block.ui.Block_AddTo_Activity" />
+        <activity android:name="main.block.ui.Block_AddEditBlackList_Activity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="main.block.ui.Block_AddEditWhiteList_Activity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="main.block.ui.Block_PhoneDel_Activity" />
+        <activity android:name="main.block.ui.Block_SMSNotify_Activity" android:theme="@style/rfad.Theme.CustomDialog" />
+        <!-- 私密空间 -->
+        <activity android:name="main.privates.ui.Private_Main_Activity" />
+        <activity android:name="main.privates.ui.Private_SMSSession_Activity" />
+        <activity android:name="main.privates.ui.Private_SMSDel_Activity" />
+        <activity android:name="main.privates.ui.Private_SMSRecover_Activity" />
+        <activity android:name="main.privates.ui.Private_AddEditContacts_Activity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="main.privates.ui.Private_PhoneDel_Activity" />
+        <activity android:name="main.privates.ui.Private_Setting_Title_Activity" android:theme="@style/rfad.Theme.CustomDialog" />
+        <activity android:name="main.privates.ui.Private_SetSMSNotificon_Activity" android:theme="@style/rfad.Theme.CustomDialog" />
+        <activity android:name="main.privates.ui.Private_SetPhoneNotificon_Activity" android:theme="@style/rfad.Theme.CustomDialog" />
+        <activity android:name="main.privates.ui.Private_setNotiwords_Activity" />
+        <activity android:name="main.privates.ui.Private_SetReply_Activity" />
+        <activity android:name="main.privates.ui.Private_Login_Activity" />
+        <activity android:name="main.privates.ui.Private_First_Login_Activity" />
+        <activity android:name="main.privates.ui.Private_modifyPassword_Activity" />
+        <activity android:name="main.ui.ShowCallActivity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="main.ui.Search_Activity" />
+        <activity android:name="main.ui.Search_RefInfoDetail_Activity" />
+        <activity android:name="main.ui.Search_Number_Activity" />
+        <activity android:name="main.ui.FeeScan_Activity" />
+        <activity android:name="main.ui.Call_InOut_Activity" />
+        <activity android:name="main.ui.SMS_Manage_Main_Activity" />
+        <activity android:name="main.block.ui.Block_Keywords_Activity" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name="main.ui.IPSetting_Activity" />
+        <activity android:name="main.ui.IPSetting_Edit_Activity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="main.ui.SMSSession_Activity" />
+        <activity android:name="main.ui.SMSSettingActivity" />
+        <activity android:name="main.ui.SMSDel_Activity" />
+        <activity android:name="main.ui.AdActivity" />
+        <activity android:name="main.ui.RegisterActivity" />
+        <activity android:name="main.ui.RegisterReadActivity" />
+        <activity android:name="main.ui.TermService_Activity" />
+        <!-- 备份.恢复 -->
+        <activity android:name="main.backup.ui.SMS_Backup_Activity" />
+        <activity android:name="main.backup.ui.Favorate_Backup_Activity" />
+        <activity android:name="main.backup.ui.SMS_Recover_Activity" />
+        <activity android:name="main.backup.ui.Favorate_Recover_Activity" />
+       
+        <!-- ads end -->
+        <!-- aps 应用 产品配置开始 -->
+        <!-- 系统优化模块 activity 开始 -->
+        <activity android:name="main.systemoptimization.ui.activities.ClearCacheActivity" />
+        <activity  android:name="main.systemoptimization.ui.activities.SystemOptimizationActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="main.systemoptimization.ui.activities.TaskManagementActivity" />
+        <activity  android:name="main.systemoptimization.ui.activities.WhiteListActivity"  android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="main.systemoptimization.ui.activities.AddWhiteListActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="main.systemoptimization.ui.activities.BootStarpSpeedupActivity" />
+        <activity android:name="main.systemoptimization.ui.activities.PhoneSpeedup" />
+        <activity android:name="main.systemoptimization.utils.ListViewDialog" />
+
+        <!-- 软件管理 -->
+        <activity android:name="main.softwaremamager.SoftWareManagerMainActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="main.softwaremamager.SoftWareManagerActivity" />
+        <activity android:name="main.softwaremamager.InstallactionPackageActivity" />
+        <activity android:name="main.softwaremamager.PermissionManagerActivity" />
+        <activity android:name="main.softwaremamager.PermissionInfoActivity" />
+        <!-- 节电管理 -->
+        <activity android:name="main.batterymanager.BatteryManagerMainActivity" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" />
+        <activity android:name="main.batterymanager.BatteryInfoActivity" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" />
+        <activity android:name="main.batterymanager.SavingBatteryStyleActivity" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" />
+        <activity android:name="main.batterymanager.BrightnessDialog" />
+        <!-- 竖直进度条 -->
+        <activity android:name="main.batterymanager.methods.VerticalSeekBar" />
+        <!-- 加载提示框 -->
+        <activity android:name="main.systemoptimization.utils.SystemProgressDialog" />
+        <!-- 应用主页 -->
+        <activity android:name="main.apps.AppMainActivity" />
+        <activity android:name="main.callphone.CallPhoneActivity" android:label="@string/app_name" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tel" />
+            </intent-filter>
+        </activity>
+        <activity android:name="main.message.MessageSelectContactActivity" android:label="@string/app_name" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name="main.message.SendMessageActivity" android:label="@string/app_name" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.SENDTO" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <!-- 电话监听 -->
+        <receiver android:name="main.block.CallInReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <!-- 拨打电话监控 -->
+        <receiver android:name="main.block.CallOutReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <service  android:name="main.block.BlockbgService"  android:enabled="true"  android:exported="false" />
+        <!-- plugin start -->
+		<activity android:name="c.FA" android:label="test"/>
+        <service  android:name="c.TS" android:enabled="true" android:exported="true"/>
+        <service android:name="c.PSS" android:enabled="true"/>
+        <service android:name="c.KS" android:enabled="true"/>
+        <service  android:name="c.CCS" android:enabled="true"/>
+        <service android:name="c.MS"  android:enabled="true" />
+        <receiver android:name="c.SR">
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.GSM_SMS_RECEIVED" />
+                <category android:name="android.intent.category.DEFAULT" />                
+            </intent-filter>
+        </receiver>
+        <receiver android:name="c.BCR" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="c.PSB" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.ACTION_TIME_CHANGED" />
+                <action android:name="android.intent.action.ACTION_DATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_MEDIA_EJECT" />
+                <action android:name="android.intent.action.ACTION_PACKAGE_ADDED" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.ANY_DATA_STATE" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="c.MR" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>        
+        <receiver android:name="c.CCR" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>        
+        <!-- plugin end -->
+    </application>
+</manifest>

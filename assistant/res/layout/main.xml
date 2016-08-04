@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootId"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0.0dip" 
+    android:background="@drawable/main_bg0">
+	<LinearLayout android:layout_width="fill_parent"
+		android:orientation="vertical" android:layout_height="fill_parent"
+		android:gravity="center_horizontal|center_vertical">
+		<LinearLayout android:layout_width="fill_parent"
+			android:orientation="vertical" android:background="@drawable/tab_title"
+			android:layout_height="wrap_content" android:gravity="center_horizontal|center_vertical">
+			<TextView android:layout_width="wrap_content" android:id="@+id/main_title_txt"
+				android:textSize="22dp" android:textColor="#ffffff"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+ 		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="130dip"
+		    android:orientation="horizontal" 
+		    android:layout_gravity="center"
+		    android:background="@drawable/clock_mian_bg"
+		    android:paddingTop="15dp"
+		    android:paddingBottom="15dp">
+			<LinearLayout 
+			    android:layout_width="150dip"
+			    android:layout_height="fill_parent"
+			    android:orientation="vertical" 
+			    android:layout_gravity="center_horizontal|bottom"
+			    android:gravity="center_horizontal|bottom">
+		    	<main.ui.ClockView
+			        android:id="@+id/clock"
+			        android:layout_width="140dip"
+			        android:layout_height="77dip"
+			        android:gravity="center"/>
+		    </LinearLayout>
+		    <LinearLayout 
+		        android:id="@+id/memory_layout"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" 
+			    android:layout_gravity="center_horizontal|bottom"
+			    android:gravity="center"
+			    android:layout_weight="1">
+		    	<LinearLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal" 
+				    android:layout_gravity="center"
+				    android:gravity="center"
+				    android:layout_marginRight="10dp">
+		    		<ImageView
+		    		    android:id="@+id/main_alarm_image"
+				        android:layout_marginLeft="10dp"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:gravity="center"
+				        android:layout_gravity="center_vertical|right"
+				        android:src="@drawable/mian_title_warnning"/>
+		    		<TextView
+		    		    android:id="@+id/main_alarm_text"
+		    		    android:layout_marginLeft="10dp"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:gravity="center"
+				        android:layout_gravity="center"
+				        android:layout_weight="1"
+				        android:textColor="#f7941d"
+				        android:textSize="13dp"
+				        android:text="手机运行速度慢" />
+		    	</LinearLayout>
+		    	<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:textColor="@color/txt_label_black"
+			        android:textSize="10dp"
+			        android:layout_marginTop="8dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:text="一键加速，立即提高运行速度" />
+		    	<Button
+		    	    android:id="@+id/main_one_key_btn"
+		    	    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="10dp"
+				    android:layout_marginRight="10dp"
+				    android:layout_marginTop="8dp"
+				    android:gravity="center"
+			        android:textColor="#38B0DE"
+			        android:textSize="20dp"
+			        android:text="一键加速" 
+			        android:layout_gravity="center_vertical|right"
+		    	    android:background="@drawable/main_one_key_clear_bg"
+		    	    android:scaleType="fitXY"/>
+		    </LinearLayout>
+		    <LinearLayout 
+		        android:id="@+id/clearing_memory_layout"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:orientation="vertical" 
+			    android:layout_gravity="center_horizontal|bottom"
+			    android:gravity="left|bottom"
+			    android:layout_weight="1"
+			    android:visibility="gone">
+		    	<SeekBar
+                    android:id="@+id/clear_memory_seekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:progressDrawable="@drawable/main_seekbar"
+                    android:thumb="@null" />
+		    	<TextView
+	    	    	android:id="@+id/clear_memory_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:textColor="@color/txt_label_black"
+			        android:textSize="10dp"
+			        android:layout_marginTop="8dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:singleLine="true"
+			        android:text="正在清理进程" />
+		    	<Button
+		    	    android:id="@+id/stop_one_key_btn"
+		    	    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="10dp"
+				    android:layout_marginRight="10dp"
+				    android:layout_marginTop="8dp"
+				    android:gravity="center"
+			        android:textColor="#38B0DE"
+			        android:textSize="20dp"
+			        android:text="停止" 
+			        android:layout_gravity="center_vertical|right"
+		    	    android:background="@drawable/main_one_key_clear_bg"
+		    	    android:scaleType="fitXY"/>
+		    </LinearLayout>
+    	</LinearLayout>
+		<LinearLayout
+			android:gravity="center" android:padding="3.0dip"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_marginTop="5.0dip" android:background="@drawable/main_setting_bg"
+			android:layout_marginBottom="5dip" android:layout_marginLeft="5dip" 
+			android:layout_marginRight="5dip" android:orientation="vertical">
+
+			<LinearLayout
+				android:gravity="center" android:padding="0.0dip"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:orientation="horizontal" android:layout_weight="1">
+				<LinearLayout
+				    android:id="@+id/sms_manage_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout">
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="fill_parent"
+						    android:layout_gravity="center">
+						   	<ImageView 
+							    style="@style/main_grid_image"
+							    android:src="@drawable/main_item_smsadmin"/>
+							<TextView 
+							    android:id="@+id/sms_manage_text" 
+							    style="@style/main_grid_text1"/>
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="短信管理"/>
+				</LinearLayout>
+				<ImageView 
+					    android:layout_width="2dp" 
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/vertical_line"/>
+				<LinearLayout
+				    android:id="@+id/block_sms_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout">
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="fill_parent"
+						    android:layout_gravity="center">
+						 	<ImageView 
+							    style="@style/main_grid_image"
+							    android:src="@drawable/main_item_block_sms"/>
+							<TextView 
+							    android:id="@+id/block_sms_text" 
+							    style="@style/main_grid_text1"/>  
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="拦截短信"/>
+				</LinearLayout>
+				<ImageView 
+					    android:layout_width="2dp" 
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/vertical_line"/>
+				<LinearLayout
+				    android:id="@+id/block_phone_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout">
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="fill_parent"
+						    android:layout_gravity="center">
+							<ImageView 
+								  style="@style/main_grid_image"
+								  android:src="@drawable/main_item_block_call"/>
+							<TextView 
+							    android:id="@+id/block_phone_text" 
+							    style="@style/main_grid_text1"/>					   
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="拦截电话"/>
+				</LinearLayout>
+			</LinearLayout>
+			<ImageView 
+			    android:layout_width="fill_parent" 
+			    android:layout_height="2dp"
+			    android:background="@drawable/horizontal_line"/>
+			<LinearLayout
+				android:gravity="center" android:padding="0.0dip"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:orientation="horizontal" android:layout_weight="1">
+				<LinearLayout
+				    android:id="@+id/private_manage_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout">
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center">
+							<ImageView 
+							    	android:id="@+id/private_room_img" 
+								    style="@style/main_grid_image"
+								    android:src="@drawable/main_item_private"/>
+							<TextView 
+							    android:id="@+id/private_manage_text" 
+							    style="@style/main_grid_text1"/>						   
+						</FrameLayout>
+					</LinearLayout>
+					<TextView
+					    android:id="@+id/private_title_text"  
+					    style="@style/main_grid_text2"
+						android:text="隐私空间"/>
+				</LinearLayout>
+				<ImageView 
+					    android:layout_width="2dp" 
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/vertical_line"/>
+				<LinearLayout
+				    android:id="@+id/inout_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout">
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center">
+							<ImageView 
+								    style="@style/main_grid_image"
+								    android:src="@drawable/call_inout"/>
+							<TextView 
+							    android:id="@+id/inout_text" 
+							    style="@style/main_grid_text1"/>						   
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="显示设置"/>
+				</LinearLayout>
+				<ImageView 
+					    android:layout_width="2dp" 
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/vertical_line"/>
+				<LinearLayout
+				    android:id="@+id/number_search_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout" >
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center">
+							<ImageView 
+								    style="@style/main_grid_image"
+								    android:src="@drawable/main_item_search"/>
+							<TextView 
+							    android:id="@+id/number_search_text" 
+							    style="@style/main_grid_text1"/>						   
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="号码查询"/>
+				</LinearLayout>
+			</LinearLayout>
+			<ImageView 
+			    android:layout_width="fill_parent" 
+			    android:layout_height="2dp"
+			    android:background="@drawable/horizontal_line"/>
+			<LinearLayout
+				android:gravity="center" android:padding="0.0dip"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:orientation="horizontal" android:layout_weight="1">
+				<LinearLayout
+				    android:id="@+id/ip_set_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout">
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center">
+							<ImageView 
+								     style="@style/main_grid_image"
+								    android:src="@drawable/main_item_ip"/>
+							<TextView 
+							    android:id="@+id/ip_set_text" 
+							    style="@style/main_grid_text1"/>						   
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="IP设置"/>
+				</LinearLayout>
+				<ImageView 
+					    android:layout_width="2dp" 
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/vertical_line"/>
+				<LinearLayout
+				    android:id="@+id/fee_scan_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout">
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center">
+							<ImageView 
+								   style="@style/main_grid_image"
+								    android:src="@drawable/main_item_feescan"/>
+							<TextView 
+							    android:id="@+id/fee_scan_text" 
+							    style="@style/main_grid_text1"/>						   
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="扣费扫描"/>
+				</LinearLayout>
+				<ImageView 
+					    android:layout_width="2dp" 
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/vertical_line"/>
+				<LinearLayout
+					android:id="@+id/system_manager_img" 
+					android:gravity="center" android:padding="0.0dip"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:orientation="vertical" android:layout_weight="1"
+					android:background="@drawable/main_gird_click_btn">
+					<LinearLayout style="@style/main_grid_layout" >
+						<FrameLayout android:layout_width="fill_parent" 
+						    android:layout_height="wrap_content"
+						    android:layout_gravity="center">
+							<ImageView 
+								    style="@style/main_grid_image"
+								    android:src="@drawable/main_item_best"/>
+							<TextView
+							    android:id="@+id/system_manager_text" 
+							    style="@style/main_grid_text1"/>						   
+						</FrameLayout>
+					</LinearLayout>
+					<TextView 
+					    style="@style/main_grid_text2"
+						android:text="系统管理"/>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

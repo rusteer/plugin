@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.client.RetentionStatMyBatisDao">
+    <update id="increaseAccessCount" parameterType="net.workspace.web.entity.client.RetentionStatEntity">
+        INSERT INTO t_retention_stat
+        ( channel_id,create_date,stat_date,stat_count) VALUES (#{channelId},#{createDate},#{statDate},1)
+        ON DUPLICATE KEY
+        update stat_count=stat_count+1
+    </update>
+</mapper> 

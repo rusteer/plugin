@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:background="@drawable/list_item_bg" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <ImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/list_item_pre" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="120.0dip" android:text="TextView" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/red" android:id="@id/delete" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="  删  除" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:text="3星" android:layout_toLeftOf="@id/delete" android:layout_alignBaseline="@id/delete" android:layout_alignBottom="@id/delete" />
+            <TextView android:textSize="12.0sp" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:text="21分钟" android:layout_toLeftOf="@id/textView3" android:layout_alignBaseline="@id/textView3" android:layout_alignBottom="@id/textView3" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

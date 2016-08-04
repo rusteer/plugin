@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 白名单程序 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/task_mainlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        style="@style/system_main_layout">
+
+        <RelativeLayout android:layout_width="fill_parent"
+			android:background="@drawable/tab_title" 
+			android:layout_height="wrap_content"  >
+			<ImageView android:id ="@+id/back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true" 
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back" />
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/back"
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back_line" />
+			<TextView  android:text="@string/SystemOptimizationActivity.WhiteList.Str"
+			    android:layout_width="wrap_content"
+				android:textSize="22dp"
+				android:gravity="center" android:layout_centerInParent="true"
+				android:textColor="#ffffff" android:layout_height="wrap_content"  />
+		</RelativeLayout>
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <LinearLayout style="@style/system_title_layout" >
+
+                <TextView
+                    style="@style/system_title_text"
+                    android:text="@string/WhiteList.msg1.Str" />
+
+                <TextView
+                    android:id="@+id/system_while_list_msg"
+                    style="@style/system_title_text"
+                    android:text="0"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/system_title_text"
+                    android:text="@string/WhiteList.msg2.Str" />
+            </LinearLayout>
+        </FrameLayout>
+		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/system_task_header_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" >
+            <TextView
+                android:id="@+id/system_task_soft_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:state_pressed="true"
+                android:layout_weight="1"
+                android:textColor="@color/txt_label_blue"
+                android:text="添加白名单，确保程序运行安全"/>
+            <TextView
+                android:id="@+id/system_whilelist_addwhile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dip"
+	            android:layout_marginRight="10dip" 
+	            android:background="@drawable/software_btn_function"
+                android:text="@string/WhiteList.addWhite.Str" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:layout_weight="1">
+            <ListView
+                android:id="@+id/system_while_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:dividerHeight="2dp"
+                android:divider="@drawable/listview_line_diver" />
+            <include layout="@layout/listview_divider" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:id="@id/play_video" android:layout_width="fill_parent" android:layout_height="252.0dip">
+            <SurfaceView android:id="@id/surfaceView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="62.0dip" android:layout_height="fill_parent" android:layout_weight="0.02">
+                <ImageButton android:layout_gravity="center" android:id="@id/videoDownBtn" android:layout_width="28.0dip" android:layout_height="25.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/download" />
+                <TextView android:layout_gravity="center" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下载" />
+                <ImageButton android:layout_gravity="center" android:id="@id/rightLine1" android:layout_width="61.0dip" android:layout_height="1.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/right_line" />
+                <ImageButton android:layout_gravity="center" android:id="@id/videoFavBtn" android:layout_width="19.0dip" android:layout_height="29.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/souchang" />
+                <TextView android:layout_gravity="center" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收藏" />
+                <ImageButton android:layout_gravity="center" android:id="@id/rightLine2" android:layout_width="61.0dip" android:layout_height="1.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/right_line" />
+                <ImageButton android:layout_gravity="center" android:id="@id/imageButton3" android:layout_width="22.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/recommend" />
+                <TextView android:layout_gravity="center" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="推荐" />
+            </LinearLayout>
+        </LinearLayout>
+        <SeekBar android:id="@id/seekbar" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="6.0dip" android:progressDrawable="@drawable/playbar_xml" android:thumb="@drawable/seek_bar_cur" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+        <LinearLayout android:background="@drawable/bottom_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="100.0dip" android:layout_height="fill_parent" android:layout_weight="0.27"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:id="@id/playtime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                <TextView android:id="@id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="180.0dip" android:layout_height="35.0dip">
+                <ImageButton android:layout_gravity="center" android:id="@id/pauseBtn" android:background="@drawable/control_pause" android:layout_width="35.0dip" android:layout_height="39.0dip" android:scaleType="fitCenter" />
+                <ImageButton android:layout_gravity="center" android:id="@id/playBtn" android:background="@drawable/control_play" android:layout_width="35.0dip" android:layout_height="39.0dip" android:scaleType="fitCenter" />
+                <ImageButton android:layout_gravity="center" android:id="@id/resetBtn" android:background="@drawable/control_reset" android:layout_width="35.0dip" android:layout_height="39.0dip" android:scaleType="fitCenter" />
+                <ImageButton android:layout_gravity="center" android:id="@id/stopBtn" android:background="@drawable/control_stop" android:layout_width="35.0dip" android:layout_height="39.0dip" android:scaleType="fitCenter" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="160.0dip" android:layout_height="fill_parent">
+                <ImageButton android:layout_gravity="center" android:id="@id/stopBtn" android:background="@drawable/control_ring" android:layout_width="35.0dip" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_weight="1.0" />
+                <SeekBar android:id="@id/soundBar" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="100.0dip" android:layout_height="8.0dip" android:progressDrawable="@drawable/soundbar_xml" android:thumb="@drawable/seek_sound_cur" android:thumbOffset="0.0dip" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+                <TextView android:layout_gravity="center" android:id="@id/soundsize" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

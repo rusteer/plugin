@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>激活报表</title>
+
+</head>
+<body>
+<a href="/chan/logout">退出</a>
+<table   border="1" width="100%">
+    <tr><th>日期</th><th>激活数</th> </tr>
+    ${range $index, $activate := .result}
+    <tr><td>${$activate.StatDate}</td><td>${$activate.ActivateCount}</td></tr>
+    ${end}
+</table>
+</body>
+</html>

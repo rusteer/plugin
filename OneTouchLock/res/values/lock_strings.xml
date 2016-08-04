@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lock_name">一键锁屏</string>
+    <string name="need_to_active">一键锁屏需要如下权限以执行锁屏操作</string>
+    <string name="only_for_above_2.2">该功能仅2.2及其以上用户才能使用</string>
+</resources>

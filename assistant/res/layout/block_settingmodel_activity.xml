@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView android:text="@string/block_setting_model" 
+	    android:id="@+id/block_setting_model_txt"
+	    android:paddingLeft="10.0dip" 
+		android:paddingRight="10.0dip"
+		android:paddingTop="5.0dip"
+		android:paddingBottom="5.0dip"
+		android:textAppearance="?android:textAppearanceLarge"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" 
+		android:textColor="@color/white"
+		android:gravity="left" android:background="@drawable/block_mode_set_title_bg" />
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/block_mode_set_body_bg">
+		<RadioGroup android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:id="@+id/block_settingmodel_model0_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_0_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_0_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio0_rbtn" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					android:focusable="false" android:clickable="false"/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout
+				android:id="@+id/block_settingmodel_model1_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_1_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_1_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio1_rbtn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout
+			    android:id="@+id/block_settingmodel_model2_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_2_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_2_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio2_rbtn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout
+				android:id="@+id/block_settingmodel_model3_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_3_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_3_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio3_rbtn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout 
+				android:id="@+id/block_settingmodel_model4_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_4_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_4_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio4_rbtn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout 
+				android:id="@+id/block_settingmodel_model5_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_5_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_5_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio5_rbtn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout 
+				android:id="@+id/block_settingmodel_model6_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_6_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_6_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio6_rbtn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout 
+				android:id="@+id/block_settingmodel_model7_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_7_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_7_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio7_layout" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"  android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+			<include layout="@layout/listview_divider" />
+			<LinearLayout
+				android:id="@+id/block_settingmodel_model8_layout" 
+				android:paddingLeft="10.0dip" 
+				android:paddingTop="5.0dip"
+				android:paddingBottom="3.0dip"
+				android:focusable="true"
+				android:clickable="true" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/block_settingmodel_model_rule_8_txt" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/txt_label_black" android:id="@+id/block_settingmodel_model_summary_8_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						 />
+				</LinearLayout>
+				<RadioButton android:duplicateParentState="true"
+					android:id="@+id/block_settingmodel_modelRadio8_rbtn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:focusable="false" android:clickable="false"
+					android:layout_marginLeft="10.0dip" 
+					android:layout_marginRight="15.0dip" 
+					android:button="@drawable/radio_set_btn"
+					/>
+			</LinearLayout>
+		</RadioGroup>
+	</ScrollView>
+</LinearLayout>

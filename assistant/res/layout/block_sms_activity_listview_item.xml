@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	android:layout_width="fill_parent" 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:orientation="horizontal"
+	android:padding="3dp">
+	<TextView android:id="@+id/block_sms_listview_item_id_txt" 
+	    android:layout_width="0dip"
+		android:layout_height="0dip" />
+	<ImageView android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:id="@+id/block_sms_listview_item_img" />
+	<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:gravity="center|left"
+		android:layout_weight="1" 
+		android:layout_marginRight="3dp">
+		<TextView android:text="电话号码" android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:textColor="#000000" android:id="@+id/block_sms_listview_item_Phone_txt" />
+		<TextView android:text="短信内容" 
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:textColor="@color/txt_label_black" android:id="@+id/block_sms_listview_item_Msg_txt" />
+		<TextView android:text="短信时间" android:layout_height="wrap_content"
+			android:layout_width="fill_parent" 
+			android:id="@+id/block_sms_listview_item_Msg_date" 
+			android:gravity="right" android:textColor="#016fae"/>
+	</LinearLayout>
+</LinearLayout>

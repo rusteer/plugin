@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<RelativeLayout android:layout_width="fill_parent"
+			android:background="@drawable/tab_title" 
+			android:layout_height="wrap_content"  >
+			<ImageView android:id ="@+id/back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true" 
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back" />
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/back"
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back_line" />
+			<TextView  android:text="拦截规则设置"
+			    android:layout_width="wrap_content"
+				android:textSize="22dp"
+				android:gravity="center" android:layout_centerInParent="true"
+				android:textColor="#ffffff" android:layout_height="wrap_content"  />
+	</RelativeLayout>
+	<ScrollView 
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:scrollbars="vertical">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:orientation="vertical">
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_margin="5dp" android:background="@drawable/block_setting_bg">
+				<RelativeLayout android:gravity="center_vertical"
+					android:id="@+id/block_setting_model_layout" 
+					android:paddingLeft="10.0dip" 
+					android:paddingRight="10.0dip"
+					android:paddingBottom="5.0dip"
+					android:paddingTop="5.0dip"
+					android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/block_setting_mode_bg">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:id="@+id/block_setting_model_title_txt" android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_model" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="#016fae" android:id="@+id/block_setting_model_value_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:layout_below="@id/block_setting_model_title_txt" />
+					<ImageView android:duplicateParentState="true" android:paddingRight="10dp"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:layout_centerVertical="true"
+						android:src="@drawable/arrow_right"
+						android:layout_alignParentRight="true" />
+				</RelativeLayout>
+				<RelativeLayout android:gravity="center_vertical"
+					android:id="@+id/block_setting_callreturnring_layout"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:id="@+id/block_setting_callreturnring_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_centerVertical="true" android:layout_height="wrap_content"
+						android:text="@string/block_setting_callreturnring" />
+					<ImageView android:duplicateParentState="true" android:paddingRight="10dp"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" 
+						android:src="@drawable/arrow_right" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+				</RelativeLayout>
+				<include layout="@layout/listview_divider" />
+				<RelativeLayout android:gravity="center_vertical"
+					android:id="@+id/block_setting_keywords_layout" 
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:layout_centerVertical="true"
+						android:id="@+id/block_setting_keywords_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_keywords" />
+					<ImageView android:duplicateParentState="true"  android:paddingRight="10dp"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:src="@drawable/arrow_right" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+				</RelativeLayout>
+				<include layout="@layout/listview_divider" />
+				<RelativeLayout android:id="@+id/block_setting_strangersms_layout"
+					android:paddingLeft="10.0dip" 
+					android:paddingTop="10.0dip"
+					android:paddingBottom="10.0dip"
+					android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:layout_centerVertical="true"
+						android:id="@+id/block_setting_strangersms_title_txt"
+						android:textColor="@color/black" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_strangersms"
+						android:layout_alignParentLeft="true" />
+					<CheckBox android:id="@+id/block_setting_strangersms_value_cbox"
+						android:clickable="false" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:checked="false"   
+						android:paddingRight="0dp"
+						android:button="@drawable/selector_checkbox"
+						android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+				</RelativeLayout>
+				<include layout="@layout/listview_divider" />
+				<RelativeLayout android:id="@+id/block_setting_strangerphone_layout"
+					android:paddingLeft="10.0dip" 
+					android:paddingTop="10.0dip"
+					android:paddingBottom="10.0dip"
+					android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:layout_centerVertical="true"
+						android:id="@+id/block_setting_strangerphone_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_strangerphone" />
+					<CheckBox android:clickable="false"  android:paddingRight="0dp"
+						android:id="@+id/block_setting_strangerphone_value_cbox"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:checked="false"
+						android:button="@drawable/selector_checkbox" 
+						android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+				</RelativeLayout>
+				<include layout="@layout/listview_divider" />
+				<RelativeLayout android:id="@+id/block_setting_hidesms_layout"
+					android:paddingLeft="10.0dip" 
+					android:paddingTop="10.0dip"
+					android:paddingBottom="10.0dip"
+					android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:layout_centerVertical="true"
+						android:id="@+id/block_setting_hidesms_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_hidesms" />
+					<CheckBox android:clickable="false"  android:paddingRight="0dp"
+						android:id="@+id/block_setting_hidesms_value_cbox"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:checked="false"
+						android:button="@drawable/selector_checkbox"
+						android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+				</RelativeLayout>
+				<include layout="@layout/listview_divider" />
+				<RelativeLayout android:id="@+id/block_setting_hidephone_layout"
+					android:paddingLeft="10.0dip" 
+					android:paddingTop="10.0dip"
+					android:paddingBottom="10.0dip"
+					android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:layout_centerVertical="true"
+						android:id="@+id/block_setting_hidephone_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_hidephone" />
+					<CheckBox android:clickable="false" android:layout_width="wrap_content"
+						android:id="@+id/block_setting_hidephone_value_cbox"  android:paddingRight="0dp"
+						android:layout_height="wrap_content" android:checked="false"
+						android:button="@drawable/selector_checkbox"
+						android:layout_centerVertical="true"
+						android:layout_alignParentRight="true"
+						android:layout_toLeftOf="@id/block_setting_hidephone_title_txt" />
+				</RelativeLayout>
+			</LinearLayout>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_margin="5dp" android:background="@drawable/block_setting_bg">
+				<RelativeLayout android:gravity="center_vertical"
+					android:id="@+id/block_setting_nightmodel_layout"
+					android:paddingLeft="10.0dip" 
+					android:paddingRight="10.0dip"
+					android:paddingBottom="5.0dip"
+					android:paddingTop="5.0dip"
+					android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:background="@drawable/block_setting_mode_bg">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:id="@+id/block_setting_nightmodel_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_nightmodel" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="#016fae" android:id="@+id/block_setting_nightmodel_value_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:layout_below="@+id/block_setting_nightmodel_title_txt" />
+					<ImageView android:duplicateParentState="true" android:paddingRight="10dp"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:src="@drawable/arrow_right" android:layout_centerVertical="true"
+						android:layout_alignParentRight="true" />
+				</RelativeLayout>
+				<RelativeLayout android:gravity="center_vertical"
+					android:id="@+id/block_setting_nightstart_layout"
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:id="@+id/block_setting_nightstart_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_nightstart" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/black" android:id="@+id/block_setting_nightstart_value_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:layout_below="@+id/block_setting_nightstart_title_txt" />
+				</RelativeLayout>
+				<include layout="@layout/listview_divider" />
+				<RelativeLayout android:gravity="center_vertical"
+					android:id="@+id/block_setting_nightend_layout" 
+					android:padding="10.0dip" android:focusable="true"
+					android:clickable="true" android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView android:textAppearance="?android:textAppearanceMedium"
+						android:id="@+id/block_setting_nightend_title_txt"
+						android:textColor="@color/black"
+						android:duplicateParentState="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/block_setting_nightend" />
+					<TextView android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="@color/black" android:id="@+id/block_setting_nightend_value_txt"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:layout_below="@+id/block_setting_nightend_title_txt" />
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
+
+

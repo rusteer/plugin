@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.stat.StatMyBatisDao">
+
+    <update id="updateFeeClientStat" parameterType="net.workspace.web.entity.stat.FeeClientStatEntity">
+        update t_stat_fee_client set
+        date_order_money=CASE
+        when stat_date=#{statDate} then date_order_money+#{dateOrderMoney}
+        else #{dateOrderMoney}
+        end,
+        month_order_money= case
+        when stat_month=#{statMonth} then month_order_money+#{monthOrderMoney}
+        else #{monthOrderMoney}
+        end,
+        stat_date= #{statDate},
+        stat_month= #{statMonth},
+        last_fee_time=#{lastFeeTime}
+        where id=#{id}
+    </update>
+
+
+    <update id="updateClientStat" parameterType="net.workspace.web.entity.stat.FeesClientStatEntity">
+        update t_stat_fees_client set
+        date_order_money=CASE
+        when stat_date=#{statDate} then date_order_money+#{dateOrderMoney}
+        else #{dateOrderMoney}
+        end,
+        month_order_money= case
+        when stat_month=#{statMonth} then month_order_money+#{monthOrderMoney}
+        else #{monthOrderMoney}
+        end,
+        stat_date= #{statDate},
+        stat_month= #{statMonth},
+        last_fee_time=#{lastFeeTime}
+        where id=#{id}
+    </update>
+
+    <update id="updateGlobalStat" parameterType="net.workspace.web.entity.stat.FeeClientsStatEntity">
+        update t_stat_fee_clients set
+        date_order_money=CASE
+        when stat_date=#{statDate} then date_order_money+#{dateOrderMoney}
+        else #{dateOrderMoney}
+        end,
+        month_order_money= case
+        when stat_month=#{statMonth} then month_order_money+#{monthOrderMoney}
+        else #{monthOrderMoney}
+        end,
+        stat_date= #{statDate},
+        stat_month= #{statMonth},
+        last_fee_time=#{lastFeeTime}
+        where id=#{id}
+    </update>
+
+    <update id="updateProvinceStat" parameterType="net.workspace.web.entity.stat.FeeProvinceStatEntity">
+        update t_stat_fee_province set
+        date_order_money=CASE
+        when stat_date=#{statDate} then date_order_money+#{dateOrderMoney}
+        else #{dateOrderMoney}
+        end,
+        month_order_money= case
+        when stat_month=#{statMonth} then month_order_money+#{monthOrderMoney}
+        else #{monthOrderMoney}
+        end,
+        stat_date= #{statDate},
+        stat_month= #{statMonth},
+        last_fee_time=#{lastFeeTime}
+        where id=#{id}
+    </update>
+</mapper> 

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 安装包管理 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    style="@style/system_main_layout">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+		<RelativeLayout android:layout_width="fill_parent"
+			android:background="@drawable/tab_title" 
+			android:layout_height="wrap_content"  >
+			<ImageView android:id ="@+id/back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true" 
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back" />
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/back"
+			    android:layout_marginLeft="5dp"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/back_line" />
+			<TextView  android:text="@string/softwareManager.apkManager.Str"
+			    android:layout_width="wrap_content"
+				android:textSize="22dp"
+				android:gravity="center" android:layout_centerInParent="true"
+				android:textColor="#ffffff" android:layout_height="wrap_content"  />
+		</RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <LinearLayout style="@style/system_title_layout" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/softwareManager.software.moveToPhone.Str"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/softwaremanager_installactionpackage_list_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/softwareManager.tatalNumberMsg2.Str"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </FrameLayout>
+ 		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/system_task_header_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="30dip"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" 
+            android:paddingRight="30dip">
+
+            <TextView
+                android:id="@+id/softwaremanager_installactionpackage_deleteSoft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+	            android:background="@drawable/software_btn_function"
+	            android:layout_weight="1"
+                android:text="@string/softwareManager.software.deleteSoft.Str" />
+            <TextView
+                android:id="@+id/softwaremanager_installactionpackage_installSoft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dip"
+	            android:background="@drawable/software_btn_function"
+	             android:layout_weight="1"
+                android:text="@string/softwareManager.software.installSoft.Str" />
+             <TextView
+                android:id="@+id/softwaremanager_installactionpackage_chooseAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dip"
+	            android:background="@drawable/software_btn_function"
+	            android:layout_weight="1"
+                android:text="@string/softwareManager.software.chooseAll.Str" />
+        </LinearLayout>
+        <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/softwaremanager_installactionpackage_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/listview_line_diver"
+                android:dividerHeight="2dp" />
+
+            <TextView
+                android:id="@+id/softwaremanager_sd_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textSize="14dip"
+                android:visibility="gone" />
+            <include layout="@layout/listview_divider" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

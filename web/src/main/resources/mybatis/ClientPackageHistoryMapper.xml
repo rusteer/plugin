@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.workspace.web.repository.client.ClientPackageHistoryMyBatisDao">
+    <update id="touch" parameterType="net.workspace.web.entity.client.ClientPackageHistoryEntity">
+        INSERT INTO t_client_package_history
+        ( `client_id`, `package_name`, `version_code`, `create_date`, `create_time`, `update_time` ) 
+        	VALUES 
+       	(#{clientId},#{packageName},#{versionCode},#{createDate},#{createTime},#{updateTime})
+        ON DUPLICATE KEY
+        update update_time=#{updateTime}
+    </update>
+</mapper> 

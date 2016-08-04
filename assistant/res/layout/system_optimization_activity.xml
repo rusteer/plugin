@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/system_main_layout"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/SystemOptimizationActivity.LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <RadioGroup   style="@style/system_RadioGroup_layout" >
+                <!--
+                <RadioButton
+                    android:id="@+id/SystemOptimization_radio_optpage"
+                    style="@style/system_tab_bottom"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/system_btn_radio_tab_whitelist_use"
+                    android:visibility="gone" />
+
+                 android:text="@string/TaskManagementActivity.OneKeyOptimization.Str" 
+                  android:text="@string/SystemOptimizationActivity.TaskManagement.Str"
+                     android:text="@string/SystemOptimizationActivity.WhiteList.Str" 
+                    android:text="@string/SystemOptimizationActivity.ClearCache.Str" 
+                      android:text="@string/SystemOptimizationActivity.BootStarpSpeedup.Str" 
+                -->
+
+                <RadioButton
+                    android:id="@+id/SystemOptimization_radio_TaskManagement"
+                    style="@style/system_tab_bottom"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:drawableTop="@drawable/system_btn_radio_tab_taskmanager_use"
+                    android:textColor="@color/white"
+                    android:text="@string/SystemOptimizationActivity.TaskManagement.Str"
+                    android:textColorHighlight="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/SystemOptimization_radio_ClearCache"
+                    style="@style/system_tab_bottom"
+                    android:layout_weight="1"
+                      android:text="@string/SystemOptimizationActivity.ClearCache.Str" 
+                    android:drawableTop="@drawable/system_btn_radio_tab_clearcache_use" />
+
+                <RadioButton
+                    android:id="@+id/SystemOptimization_radio_WhiteList"
+                    style="@style/system_tab_bottom"
+                    android:layout_weight="1"
+                     android:text="@string/SystemOptimizationActivity.WhiteList.Str" 
+                    android:drawableTop="@drawable/system_btn_radio_tab_whitelist_use"
+                    android:visibility="visible" />
+<!--  
+                <RadioButton
+                    android:id="@+id/SystemOptimization_radio_BootStarpSpeedup"
+                    style="@style/system_tab_bottom"
+                     android:text="@string/SystemOptimizationActivity.BootStarpSpeedup.Str" 
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/system_btn_radio_tab_osspeedup_use" />
+-->
+            </RadioGroup>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

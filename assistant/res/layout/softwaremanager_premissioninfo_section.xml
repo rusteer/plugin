@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 分隔栏 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="10dip"
+    android:background="@drawable/system_itemlist_default"
+	 >
+	
+	<TextView android:id="@+id/softwaremanager_permissioninfo_section_title"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		  
+		 />
+</LinearLayout>

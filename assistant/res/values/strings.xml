@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">手机助手</string>
+	<string name="error">错误</string>
+	<string name="warning">警告</string>
+	<!-- 首页 -->
+	<string name="Dialog.Confirm">确定</string>
+	<string name="Dialog.Cancel">取消</string>
+   <string name="FeedBackDialog.EditText.Hint">在此输入您的反馈意见</string> 
+    <string name="FeedBackDialog.Button.Text">查看反馈信息</string> 
+ 
+
+	<dimen name="bottom_tab_padding_drawable">1dp</dimen>
+	<dimen name="bottom_tab_font_size">12sp</dimen>
+	
+
+	<!-- 骚扰拦截 -->
+	<string name="privateTitle">隐私空间</string>
+	<string name="privateNotifyTxt">来短信了哟</string>
+	<string name="blockSmsNotifyTxt">有短信被拦截</string>
+	<string name="blockPhoneNotifyTxt">有电话被拦截</string>
+	<string name="private_setting_pwdTitle">更改隐私密码</string>
+	<string name="private_setting_clickTxt">点击更改</string>
+	<string name="private_setting_title">主界面显示名称及图标</string>
+	<string name="private_setting_bar_title">隐私通知设置</string>
+	<string name="private_setting_newNotify">新内容通知</string>
+	<string name="private_setting_smsRing">隐私短信铃声</string>
+	<string name="private_setting_smsNotificon">隐私短信通知图标</string>
+	<string name="private_setting_callNotificon">隐私来电通知图标</string>
+	<string name="private_setting_Notifwords">自定义通知文字</string>
+	<string name="private_setting_newNotifvibrate">新内容震动提示</string>
+	<string name="private_setting_callautoReturn">立即挂断后自动回复短信</string>
+	<string name="private_setting_SMS">短信内容</string>
+	<string name="private_setting_title_remark">为了保护隐私，你可修改隐私图标和名称</string>
+	
+	
+	<string name="block_setting_model">白天拦截模式</string>
+	<string name="block_setting_callreturnring">拦截来电返回音</string>
+	<string name="block_setting_keywords">短信过滤关键字</string>
+	<string name="block_setting_strangersms">拦截陌生人短信</string>
+	<string name="block_setting_strangerphone">拦截陌生人电话</string>
+	<string name="block_setting_hidesms">拦截隐藏号码短信</string>
+	<string name="block_setting_hidephone">拦截隐藏号码电话</string>
+	<string name="block_setting_night">夜间免打扰设置</string>
+	<string name="block_setting_day">白天免打扰设置</string>
+	<string name="block_setting_nightmodel">夜间免打扰模式</string>
+	<string name="block_setting_nightstart">开始时间设定</string>
+	<string name="block_setting_nightend">结束时间设定</string>
+	<string name="block_setting_returnring_title">来电拒接</string>
+	<string name="block_setting_returnring">拦截来电返回音选择：</string>
+	<string name="block_setting_returnring_wait">开启来电等待</string>
+	<string name="block_setting_returnring_summary">如果您选择拦截来电时让对方听到“您拨打的号码是空号”或“已关机”“已停机”,
+		本程序将启用您手机的“遇忙呼叫转移”功能。该功能开启后, 您的电话占线时对方也会听到“空号”等提示音, 所以建议您同时开启来电等待功能。
+	</string>
+	<string name="block_keywords">"生,小姐,本,提供,折,热线,中奖,服务,优惠"</string>
+	<string name="termservice_confirm">您同意接受手机助手用户协议</string>
+    <string name="termservice_OK">确认使用</string>
+    <string name="termservice_Txt">nbsp欢迎您使用手机助手！我们将竭力为你的手机提供可靠的骚扰拦截服务，使您的手机使用更高效、便捷。\nnbsp本软件属于免费安装类软件，使用过程中所产生的网络流量费由您相关的移动运营商收取。我们竭诚为您提供最好的服务，选择使用即表示您已经知晓并完全同意《手机助手用户协议》。\nnbsp为了完善我们的服务，请提出宝贵意见，帮助我们不断改进，为你提供更优秀的产品和服务。非常感谢你的安装和使用，谢谢！</string>
+	<!-- 系统优化 所用字符结束 -->
+	<!-- 系统优化   所用字符开始 -->
+
+    <string name="system.lodingDialog.Str">数据加载中...</string>
+    <string name="system.lodingDialog.clearCahe.Str">缓存数据加载中...</string>
+    <string name="system.lodingDialog.Optimization.Str">正在优化...</string>
+    <string name="SystemOptimizationActivity.TaskManagement.Str">任务管理</string>
+    <string name="taskManagement_cpu_str">CPU:</string>
+    <string name="TaskManagement.soft.cpu.Str">CPU排行</string>
+    <string name="TaskManagement.soft.menory.Str">内存排行</string>
+    <string name="taskManagement_memory_str">内存:</string>
+    <string name="TaskManagement.runingNamber.Str">共运行了:</string>
+    <string name="TaskManagement.runingSize.Str">个程序,手机内存可用空间:</string>
+    <string name="SystemOptimizationActivity.ClearCache.Str">垃圾清理</string>
+    <string name="SystemOptimizationActivity.WhiteList.Str"> 白名单  </string>
+    <string name="TaskManagementActivity.OneKeyOptimization.Str">一键优化</string>
+    <string name="WhiteList.addWhite.Str">添加白名单</string>
+    <string name="WhiteList.addWhiteList.Str">加入白名单</string>
+    <string name="WhiteList.removeWhiteList.Str">移除白名单</string>
+    <string name="WhiteList.msg1.Str">共有</string>
+    <string name="WhiteList.msg2.Str">款白名单程序</string>
+    <string name="WhiteList.pleaseaddWhite.Str">请选择需要加入到白名单的程序
+	</string>
+    <string name="softwareManager.allsoftware.Str">所有程序</string>
+    <string name="softwareManager.endProgram.Str">结束程序</string>
+    <string name="softwareManager.uninstall.Str">卸载程序</string>
+    <string name="ClearCache.cacheSize.Str">缓存:</string>
+    <string name="ClearCache.cacheMsg.Str">款缓存程序，共计：</string>
+    <string name="ClearCache.onekeyClear.Str">一键清理</string>
+    <string name="ClearCache.noCacheData.Str">暂时没有垃圾需要清理</string>
+    <string name="SystemOptimizationActivity.BootStarpSpeedup.Str">开机加速</string>
+    <string name="BootStarpSpeedup.OneKeySpeedUp.Str">一键加速</string>
+    <string name="BootStarpSpeedup.msg1.Str">共允许：</string>
+    <string name="BootStarpSpeedup.msg2.Str">个，禁止</string>
+    <string name="BootStarpSpeedup.msg3.Str">个</string>
+    <string name="BootStarpSpeedup.noRootmsg.Str">您需要ROOT权限才可以禁止开机启动</string>
+    <string name="softwareManager.Str">软件管理</string>
+    <string name="softwareManager.apkManager.Str">安装包管理</string>
+    <string name="softwareManager.permissionManager.Str">权限管理
+	</string>
+    <string name="software.uninstall.Str">卸载</string>
+    <string name="software.fastuninstall.Str">快速卸载</string>
+    <string name="software.move.Str">搬家</string>
+    <string name="software.move.SDSoftNumber.Str">款软件可移动到存储卡</string>
+    <string name="software.moveToSD.Str">移至存储卡</string>
+    <string name="software.moveToPhone.Str">移至手机</string>
+    <string name="softwareManager.tatalNumberMsg1.Str">共计安装了
+	</string>
+    <string name="softwareManager.tatalNumberMsg2.Str">款软件</string>
+    <string name="softwareManager.version.Str">版本:</string>
+    <string name="softwareManager.volume.Str">大小:</string>
+    <string name="softwareManager.SD.Str">存储卡</string>
+    <string name="softwareManager.phone.Str">手机</string>
+    <string name="softwareManager.software.moveToPhone.Str">存储卡中软件共</string>
+    <string name="softwareManager.software.moveToSD.Str">个软件可移至存储卡</string>
+    <string name="softwareManager.software.moveError.Str">您的手机未安装存储卡，不能进行软件搬家</string>
+    <string name="softwareManager.software.deleteSoft.Str">删除</string>
+    <string name="softwareManager.software.installSoft.Str">安装</string>
+    <string name="softwareManager.software.chooseAll.Str">全选</string>
+    <string name="softwareManager.software.NOchooseAll.Str">全不选</string>
+    <string name="softwareManager.permissionmanager.msg1.Str">您有</string>
+    <string name="softwareManager.permissionmanager.msg2.Str">款软件使用了敏感权限</string>
+    <string name="softwareManager.permissioninfo.Str">配置软件权限</string>
+    <string name="softwareManager.permissioninfo.title1.Str">信任</string>
+    <string name="softwareManager.permissioninfo.title_choose.Str">此款软件允许其一切操作</string>
+   
+    <string name="home.softwaremanager.str">软件管理</string>
+    <string name="home.SystemOptimizationActivity.str">系统优化</string>
+    <string name="home.battery.str">节电管理</string>
+    <string name="softwareManager.speeddoing.str">快捷操作</string>
+    <string name="batteryManager.battaryinfo.str">电池信息</string>
+    <string name="batteryManager.saveBattaryStyle.str">节电设置</string>
+    <string name="batteryManager.moreSsaveBattaryStyle.str">更多节电设置</string>
+    <string name="batteryManager.OpenSaveBattaryStyle.str">开启省电模式</string>
+    <string name="batteryManager.battaryNumberInfo.str">电池电量:</string>
+    <string name="batteryManager.callTime.str">通话时间:</string>
+    <string name="batteryManager.onNetTime.str">上网时间:</string>
+    <string name="batteryManager.waitingTime.str">待机时间:</string>
+    <string name="batteryManager.voltage.str">电压</string>
+    <string name="batteryManager.battaryState.str">电池状态</string>
+    <string name="batteryManager.useBattarySort.str">耗电量排行</string>
+    <string name="batteryManager.useBattarySort2.str">应用程序耗电量排名</string>
+    <string name="batteryManager.battaryLowAutoOpenSaveBattaryStyle.str">电量较低时自动开启省电模式</string>
+    <string name="batteryManager.SaveBattaryStyleSetting.str">节电设置</string>
+    <string name="batteryManager.screenSetting.str">屏幕设置</string>
+    <string name="batteryManager.SaveBattaryStyleSettingScreenTime.str">省电模式设置屏幕亮度屏幕时间</string>
+    <string name="batteryManager.colseBluetooth.str">蓝牙</string>
+    <string name="batteryManager.SaveBattaryStyleCloseBlueTooth.str">建议关闭，关闭后无法接收蓝牙传输，需手动开启</string>
+    <string name="batteryManager.CloseWifi.str">无线网络</string>
+    <string name="batteryManager.SaveBattaryStyleCloseWifi.str">建议不使用WI-FI上网的时候关闭</string>
+    <string name="batteryManager.Close2Gand3G.str">2G/3G数据连接</string>
+    <string name="batteryManager.SaveBattaryStyleClose2Gand3G.str">关闭可禁用移动网络数据连接</string>
+    <string name="batteryManager.CloseAutoSynchronization.str">关闭自动同步</string>
+    <string name="batteryManager.SaveBattaryStyleCloseAutoSynchronization.str">关闭可禁用自动同步</string>
+    <string name="batteryManager.CloseVibration.str">来电震动</string>
+    <string name="batteryManager.SaveBattaryStyleCloseVibration.str">可关闭震动反馈</string>
+    <string name="batteryManager.GPS.str">GPS</string>
+    <string name="batteryManager.SaveBattaryStyleCloseGPS.str">使用GPS卫星来准确定位</string>
+    <string name="batteryManager.ScreenSetting.str">屏幕设置</string>
+    <string name="batteryManager.Screen.str">屏幕亮度</string>
+    <string name="batteryManager.ScreenAutoAdjust.str">自动调节</string>
+    <string name="batteryManager.CloseScreenTime.str">关屏时间</string>
+    <string name="batteryManager.SaveBattaryStyleScreen.str">调整屏幕亮度，可有效节约电量</string>
+    <string name="batteryManager.ScreenOpen.str">屏幕待机时间</string>
+    <string name="batteryManager.SaveBattaryStyleScreenOpen.str">选择屏幕待机时间</string>
+    <string name="batteryManager.ScreenAutoRota.str">屏幕自动旋转</string>
+    <string name="batteryManager.SaveBattaryStyleScreenAutoRota.str">设置屏幕自动旋转</string>
+    <string name="batteryManager.CloseingWifi.str">正在关闭无线网络...</string>
+    <string name="batteryManager.OpeningWifi.str">正在打开无线网络...</string>
+    <string name="batteryManager.SaveBattaryStyleOpneingWifi.str">WI-FI已打开,建议关闭</string>
+    <string name="batteryManager.Screen_seekBar_10s.str">10秒</string>
+    <string name="batteryManager.Screen_seekBar_30s.str">30秒</string>
+    <string name="batteryManager.Screen_seekBar_1min.str">1分钟</string>
+    <string name="batteryManager.Screen_seekBar_5min.str">5分钟</string>
+    <string name="batteryManager.Screen_seekBar_10min.str">10分钟</string>
+    <string name="batteryManager.submit.str">确定</string>
+    <string name="batteryManager.cancel.str">取消</string>
+    <string name="batteryManager.bgdataTitle.str">后台数据</string>
+    <string name="batteryManager.closebgdata.str">已关闭，开启此项可允许程序后台联网</string>
+    <string name="batteryManager.openbgdata.str">建议关闭，可阻止应用程序后台联网</string>
+    <string name="system.about.str">关于</string>
+    <string name="system.help.str">帮助</string>
+    <string name="system.feedback.str">反馈</string>
+    <string name="system.jp.str">我的软件</string>  
+    <string name="system.submit.str">确定</string>
+    <string name="system.cancel.str">取消</string>
+    <string name="home.checkup.str">检测新版本</string>
+    
+    <string name="phone.manager.str">系统管理</string>
+       <string name="phone.data.str">手机数据</string>
+    <string name="phone.model.str">手机型号:</string>
+    <string name="phone.OSval.str">系统版本:</string>
+    <string name="phone.IMEI.str">手机串号:</string>
+    <string name="phone.CPUmodel.str">CPU型号:</string>
+      <string name="phone.CPUmaxspeed.str">最高速度:</string>
+        <string name="phone.CPUminspeed.str">最小速度:</string>
+    <string name="phone.RUNingMemory.str">运行内存总量:</string>
+    <string name="phone.TotalMemory.str">手机内存总量:</string>
+    <string name="phone.SDMemory.str">SD存储卡容量:</string>
+    <string name="phone.screendp.str">屏幕分辨率:</string>
+        <string name="phone.Pixel.density.str">像素密度:</string>
+    <string name="phone.Nduo.str">多点触控:</string>
+    <string name="phone.support.str">支持</string>
+    <!-- 系统优化   所用字符结束 --> 
+    
+    <string name="phone_call_phone_value">拨打电话</string>
+	<string name="phone_address_book_value">通讯录</string>
+	<string name="phone_phone_record_value">通话记录</string>
+	<string name="phone_clear_all_record_value">清除所有通话记录</string>
+	<string name="phone_input_phone_tips_hint">请输入号码</string>
+	<string name="phone_search">搜索</string>
+	<string name="phone_select_all">选择全部</string>
+	<string name="phone_submit">确定</string>
+	<string name="phone_cancel">取消</string>
+	<string name="phone_call">呼叫</string>
+	<string name="phone_send_message">发送短信</string>
+	<string name="phone_receiver">接收者</string>
+	<string name="phone_input_String">输入内容</string>
+	<string name="phone_send">发送</string>
+	<string name="phone_delete_record">清除通话记录</string>
+	<string name="phone_add_contact">添加联系人</string>
+	<string name="phone_today">今天</string>
+	<string name="phone_yesterday">昨天</string>
+	<string name="phone_less_one_miniute">1分钟以内</string>
+	<string name="phone_miniutes_before">分钟前</string>
+	<string name="phone_hours_before">小时前</string>
+	<string name="phone_not_exist_receiver">无效接收者:</string>
+	<string name="phone_change_receiver">请更正接收者，否则他将无法收到信息</string>
+	<string name="phone_receiver_not_null">接受者不能为空</string>
+	<string name="phone_input_receiver">请正确的填写接收者</string>
+	<string name="phone_content_not_null">发送内容不能为空</string>
+	<string name="phone_input_content">请将发送内容填写完整</string>
+	<string name="phone_already_in_white">已经在白名单中，不能再加入到黑名单</string>
+	<string name="phone_already_in_black">已经在黑名单中，不能再加入到白名单</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="newGame">false</item>
+    <item type="id" name="conGame">false</item>
+    <item type="id" name="moreGame">false</item>
+    <item type="id" name="quit">false</item>
+    <item type="id" name="main_layout">false</item>
+    <item type="id" name="text_ly">false</item>
+    <item type="id" name="levelInfo">false</item>
+    <item type="id" name="percentContained">false</item>
+    <item type="id" name="livesLeft">false</item>
+    <item type="id" name="ballsView">false</item>
+    <item type="id" name="pic_ly">false</item>
+    <item type="id" name="app1">false</item>
+    <item type="id" name="icon1">false</item>
+    <item type="id" name="down1">false</item>
+    <item type="id" name="app_name1">false</item>
+    <item type="id" name="app2">false</item>
+    <item type="id" name="icon2">false</item>
+    <item type="id" name="down2">false</item>
+    <item type="id" name="app_name2">false</item>
+    <item type="id" name="btn_yes">false</item>
+    <item type="id" name="btn_more">false</item>
+    <item type="id" name="btn_no">false</item>
+    <item type="id" name="title">false</item>
+    <item type="id" name="indicator">false</item>
+    <item type="id" name="pager">false</item>
+    <item type="id" name="appIcon">false</item>
+    <item type="id" name="appPriceRegion">false</item>
+    <item type="id" name="appPrice">false</item>
+    <item type="id" name="appName">false</item>
+    <item type="id" name="appDesc">false</item>
+    <item type="id" name="iv">false</item>
+    <item type="id" name="me_close">false</item>
+</resources>

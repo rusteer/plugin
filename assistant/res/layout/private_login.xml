@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20.0dp" 
+	android:paddingRight="20.0dp" >
+	 <TextView 
+	     	android:id="@+id/private_login_pwd_title"
+	     	android:text="@string/private_setting_Notifwords" 
+		    android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp"
+			android:paddingTop="5.0dp"
+			android:paddingBottom="5.0dp"
+			android:textSize="16dp"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" 
+			android:textColor="@color/white"
+			android:gravity="left" android:background="@drawable/block_mode_set_title_bg" />
+	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/block_mode_set_body_bg"
+        android:orientation="vertical"
+        android:paddingBottom="5.0dp"
+        android:paddingTop="5.0dp" >
+        <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp">
+			<TextView 
+			    android:text="请输入密码:" 
+			    android:layout_width="wrap_content"
+				android:textColor="@color/txt_label_blue" 
+				android:layout_height="wrap_content"
+				android:textSize="16dp" />
+			<EditText
+				android:id="@+id/private_login_pwd_txt" 
+				android:password="true"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textSize="16dp"
+				android:textColor="@color/txt_label_black"
+				android:text=""
+				android:background="@drawable/password_input_btn"
+				android:gravity="left|center"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:paddingLeft="10dp"
+				android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <include layout="@layout/alertdialog_divider" />
+		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" 
+            android:paddingLeft="10.0dp" 
+			android:paddingRight="10.0dp">
+			 
+			<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+                <TextView
+	                android:id="@+id/private_login_OK_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/alertdialog_btn"
+	                android:gravity="center"
+	                android:text="@string/batteryManager.submit.str"
+	                android:textColor="@color/black"
+	                android:textSize="16dp" />
+			</LinearLayout>
+			<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+                 <TextView 
+	                android:id="@+id/private_login_Cancel_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10sp"
+	                android:background="@drawable/alertdialog_btn"
+	                android:gravity="center"
+	                android:textColor="@color/black"
+	                android:text="@string/batteryManager.cancel.str"
+	                android:textSize="16dp" />
+			</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

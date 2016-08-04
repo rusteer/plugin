@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/system_main_layout"
+       >
+    <TabHost android:id="@android:id/tabhost" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"  >
+	 
+			<LinearLayout 
+			android:id="@+id/SoftWareManagerMainActivity.LinearLayout"
+			android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent" > 
+				<FrameLayout 
+				    android:id="@android:id/tabcontent"
+					android:layout_width="fill_parent" 
+					android:layout_height="0.0dip"
+					android:layout_weight="1" />
+				<TabWidget 
+				    android:id="@android:id/tabs" 
+				    android:visibility="gone"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content" 
+					/>
+				<RadioGroup 
+				    style="@style/system_RadioGroup_layout" >
+					<RadioButton  
+						android:id="@+id/softwareManager_radio_software" 
+						android:drawableTop="@drawable/software_activity_tab_software_use" 
+						android:checked="true"
+						android:textColor="@color/white"
+							android:text="@string/softwareManager.Str"
+						style="@style/system_tab_bottom" />
+					<!-- 
+					android:text="@string/softwareManager.Str"
+					  android:text="@string/softwareManager.apkManager.Str"
+					    android:text="@string/softwareManager.permissionManager.Str"
+					 -->
+					<RadioButton 
+					    android:id="@+id/softwareManager_radio_installation_package" 
+						android:drawableTop="@drawable/software_activity_tab_installation_package_use" 
+						style="@style/system_tab_bottom" 
+						  android:text="@string/softwareManager.apkManager.Str"
+						 /> 
+						<RadioButton 
+					    android:id="@+id/softwareManager_radio_permissionManager" 
+						android:drawableTop="@drawable/software_activity_tab_perm_use" 
+						style="@style/system_tab_bottom" 
+						    android:text="@string/softwareManager.permissionManager.Str"
+						 /> 
+			
+				</RadioGroup>
+			</LinearLayout>
+	</TabHost>
+</LinearLayout>
